@@ -1,6 +1,6 @@
 # RxStarscream with RxSwift
 
-A lightweight extension to Starscream to track subscribe to websocket events with RxSwift.
+A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream) to track subscribe to websocket events with RxSwift.
 
 ### Installation - CocoaPods
 
