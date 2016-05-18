@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.homepage         = 'https://github.com/GuyKahlon/RxStarscream'
   spec.authors          = { 'Guy Kahlon' => 'guykahlon@gmail.com' }
   spec.summary          = 'A lightweight extension to Starscream to track subscribe to socket events with RxSwift.'
-  spec.source           = { :git => 'https://github.com/GuyKahlon/RxStarscream', :tag => "#{s.version}" }
+  spec.source           = { :git => 'https://github.com/GuyKahlon/RxStarscream', :tag => 0.1 }
   spec.source_files     = 'Source/*.swift'
   spec.framework        = 'Foundation'
   spec.requires_arc     = true
