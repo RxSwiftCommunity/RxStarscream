@@ -21,7 +21,7 @@ public class RxWebSocket: WebSocket {
   private var forwardDelegate: WebSocketDelegate?
   private var forwardPongDelegate: WebSocketPongDelegate?
   
-  override weak public var delegate: WebSocketDelegate? {
+  public override weak var delegate: WebSocketDelegate? {
     didSet {
       if delegate === self {
         return
@@ -31,7 +31,7 @@ public class RxWebSocket: WebSocket {
     }
   }
   
-  override weak public var pongDelegate: WebSocketPongDelegate? {
+  public override weak var pongDelegate: WebSocketPongDelegate? {
     didSet {
       if pongDelegate === self {
         return
@@ -41,11 +41,11 @@ public class RxWebSocket: WebSocket {
     }
   }
   
-  private(set) lazy var rx_response: Observable<WebSocketEvent> = {
+  public private(set) lazy var rx_response: Observable<WebSocketEvent> = {
     return self.subject
   }()
   
-  private(set) lazy var rx_text: Observable<WebSocketEvent> = {
+  public private(set) lazy var rx_text: Observable<String> = {
     return self.subject.filter { response in
       switch response {
       case .Message(_):
@@ -53,10 +53,17 @@ public class RxWebSocket: WebSocket {
       default:
         return false
       }
+      }.map { response in
+        switch response {
+        case .Message(let message):
+          return message
+        default:
+          return String()
+        }
     }
   }()
   
-  override public func connect() {
+  public override func connect() {
     super.connect()
     delegate = self
     pongDelegate = self
