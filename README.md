@@ -21,6 +21,46 @@ Then run:
 
 ## Usage examples
 
+After instal via CococPods, you should import the framework.
+
+```swift
+import Starscream
+```
+
+Once imported, you can open a connection to your WebSocket server.
+
+```swift
+
+socket = WebSocket(url: NSURL(string: "ws://localhost:8080/")!)
+socket.connect()
+```
+Now you can subscribe to all websocket events:
+
+```swift
+socket.rx_response.subscribeNext { (response: WebSocketEvent) in
+	switch response {
+	case .Connected:
+		print("Connected")
+	case .Disconnected(let error):
+		print("Disconnected with optional error : \(error)")
+	case .Message(let msg):
+		print("Message : \(msg)")
+	case .Data(_):
+		print("Data")
+	case .Pong:
+		print("Pong")
+  	}
+}.addDisposableTo(disposeBag)
+```
+
+Or just for a Message event:
+
+```swift
+socket.rx_text.subscribeNext { (message: String) in        
+	print("Message : \(message)")
+}.addDisposableTo(self.disposeBag)
+```
+      
 
 ## Author
 
