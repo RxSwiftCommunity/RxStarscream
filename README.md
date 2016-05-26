@@ -24,14 +24,14 @@ Then run:
 After instal via CococPods, you should import the framework.
 
 ```swift
-import Starscream
+import RxStarscream
 ```
 
 Once imported, you can open a connection to your WebSocket server.
 
 ```swift
 
-socket = WebSocket(url: NSURL(string: "ws://localhost:8080/")!)
+socket = RxWebSocket(url: NSURL(string: "ws://localhost:8080/")!)
 socket.connect()
 ```
 Now you can subscribe to all websocket events:
