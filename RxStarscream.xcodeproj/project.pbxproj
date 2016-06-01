@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		E42144A41CFF275E00885498 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; };
 		E42144A51CFF275E00885498 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
+		E42144DD1CFF385E00885498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42144DC1CFF385E00885498 /* AppDelegate.swift */; };
+		E42144DF1CFF385E00885498 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42144DE1CFF385E00885498 /* ViewController.swift */; };
+		E42144E21CFF385E00885498 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42144E01CFF385E00885498 /* Main.storyboard */; };
+		E42144E41CFF385E00885498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42144E31CFF385E00885498 /* Assets.xcassets */; };
+		E42144E71CFF385E00885498 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42144E51CFF385E00885498 /* LaunchScreen.storyboard */; };
+		E42144EC1CFF395500885498 /* RxStarscream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46D00311CFF22760054DF1F /* RxStarscream.swift */; };
 		E46D002A1CFF22200054DF1F /* RxStarscream.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D00291CFF22200054DF1F /* RxStarscream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E46D00321CFF22760054DF1F /* RxStarscream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46D00311CFF22760054DF1F /* RxStarscream.swift */; };
 /* End PBXBuildFile section */
@@ -16,6 +22,13 @@
 /* Begin PBXFileReference section */
 		E42144A21CFF275E00885498 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		E42144A31CFF275E00885498 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		E42144DA1CFF385E00885498 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42144DC1CFF385E00885498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E42144DE1CFF385E00885498 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E42144E11CFF385E00885498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E42144E31CFF385E00885498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E42144E61CFF385E00885498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E42144E81CFF385E00885498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E46D00261CFF22200054DF1F /* RxStarscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxStarscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46D00291CFF22200054DF1F /* RxStarscream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxStarscream.h; sourceTree = "<group>"; };
 		E46D002B1CFF22200054DF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -23,6 +36,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E42144D71CFF385E00885498 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E46D00221CFF22200054DF1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,10 +64,24 @@
 			name = "Dependency Frameworks";
 			sourceTree = "<group>";
 		};
+		E42144DB1CFF385E00885498 /* SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				E42144DC1CFF385E00885498 /* AppDelegate.swift */,
+				E42144DE1CFF385E00885498 /* ViewController.swift */,
+				E42144E01CFF385E00885498 /* Main.storyboard */,
+				E42144E31CFF385E00885498 /* Assets.xcassets */,
+				E42144E51CFF385E00885498 /* LaunchScreen.storyboard */,
+				E42144E81CFF385E00885498 /* Info.plist */,
+			);
+			path = SampleApp;
+			sourceTree = "<group>";
+		};
 		E46D001C1CFF22200054DF1F = {
 			isa = PBXGroup;
 			children = (
 				E46D00281CFF22200054DF1F /* RxStarscream */,
+				E42144DB1CFF385E00885498 /* SampleApp */,
 				E46D00271CFF22200054DF1F /* Products */,
 				E42144A61CFF27C800885498 /* Dependency Frameworks */,
 			);
@@ -57,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				E46D00261CFF22200054DF1F /* RxStarscream.framework */,
+				E42144DA1CFF385E00885498 /* SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +120,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E42144D91CFF385E00885498 /* SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E42144EB1CFF385E00885498 /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildPhases = (
+				E42144D61CFF385E00885498 /* Sources */,
+				E42144D71CFF385E00885498 /* Frameworks */,
+				E42144D81CFF385E00885498 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleApp;
+			productName = SampleApp;
+			productReference = E42144DA1CFF385E00885498 /* SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E46D00251CFF22200054DF1F /* RxStarscream */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E46D002E1CFF22200054DF1F /* Build configuration list for PBXNativeTarget "RxStarscream" */;
@@ -109,9 +161,13 @@
 		E46D001D1CFF22200054DF1F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Guy Kahlon";
 				TargetAttributes = {
+					E42144D91CFF385E00885498 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					E46D00251CFF22200054DF1F = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -123,6 +179,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E46D001C1CFF22200054DF1F;
 			productRefGroup = E46D00271CFF22200054DF1F /* Products */;
@@ -130,11 +187,22 @@
 			projectRoot = "";
 			targets = (
 				E46D00251CFF22200054DF1F /* RxStarscream */,
+				E42144D91CFF385E00885498 /* SampleApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E42144D81CFF385E00885498 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42144E71CFF385E00885498 /* LaunchScreen.storyboard in Resources */,
+				E42144E41CFF385E00885498 /* Assets.xcassets in Resources */,
+				E42144E21CFF385E00885498 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E46D00241CFF22200054DF1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +213,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E42144D61CFF385E00885498 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42144EC1CFF395500885498 /* RxStarscream.swift in Sources */,
+				E42144DF1CFF385E00885498 /* ViewController.swift in Sources */,
+				E42144DD1CFF385E00885498 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E46D00211CFF22200054DF1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,7 +233,48 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E42144E01CFF385E00885498 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E42144E11CFF385E00885498 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E42144E51CFF385E00885498 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E42144E61CFF385E00885498 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		E42144E91CFF385E00885498 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.SampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E42144EA1CFF385E00885498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.SampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E46D002C1CFF22200054DF1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -293,6 +412,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E42144EB1CFF385E00885498 /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E42144E91CFF385E00885498 /* Debug */,
+				E42144EA1CFF385E00885498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E46D00201CFF22200054DF1F /* Build configuration list for PBXProject "RxStarscream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
