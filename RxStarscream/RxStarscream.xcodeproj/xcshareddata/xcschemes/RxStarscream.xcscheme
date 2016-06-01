@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E4673A931CFF13A80061E983"
+               BlueprintIdentifier = "E4AA5DC61CFF187700D89EE0"
                BuildableName = "RxStarscream.framework"
                BlueprintName = "RxStarscream"
                ReferencedContainer = "container:RxStarscream.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E4673A931CFF13A80061E983"
+            BlueprintIdentifier = "E4AA5DC61CFF187700D89EE0"
             BuildableName = "RxStarscream.framework"
             BlueprintName = "RxStarscream"
             ReferencedContainer = "container:RxStarscream.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E4673A931CFF13A80061E983"
+            BlueprintIdentifier = "E4AA5DC61CFF187700D89EE0"
             BuildableName = "RxStarscream.framework"
             BlueprintName = "RxStarscream"
             ReferencedContainer = "container:RxStarscream.xcodeproj">

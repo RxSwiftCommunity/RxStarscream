@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4673A981CFF13A80061E983 /* RxStarscream.h in Headers */ = {isa = PBXBuildFile; fileRef = E4673A971CFF13A80061E983 /* RxStarscream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4673AA01CFF13BF0061E983 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4673A9F1CFF13BF0061E983 /* Test.swift */; };
+		E4AA5DCB1CFF187700D89EE0 /* RxStarscream.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA5DCA1CFF187700D89EE0 /* RxStarscream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4AA5DD31CFF189B00D89EE0 /* MySuperCoolClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AA5DD21CFF189B00D89EE0 /* MySuperCoolClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E4673A941CFF13A80061E983 /* RxStarscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxStarscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4673A971CFF13A80061E983 /* RxStarscream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxStarscream.h; sourceTree = "<group>"; };
-		E4673A991CFF13A80061E983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4673A9F1CFF13BF0061E983 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		E4AA5DC71CFF187700D89EE0 /* RxStarscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxStarscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4AA5DCA1CFF187700D89EE0 /* RxStarscream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxStarscream.h; sourceTree = "<group>"; };
+		E4AA5DCC1CFF187700D89EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4AA5DD21CFF189B00D89EE0 /* MySuperCoolClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySuperCoolClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E4673A901CFF13A80061E983 /* Frameworks */ = {
+		E4AA5DC31CFF187700D89EE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,28 +29,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E4673A8A1CFF13A80061E983 = {
+		E4AA5DBD1CFF187700D89EE0 = {
 			isa = PBXGroup;
 			children = (
-				E4673A9F1CFF13BF0061E983 /* Test.swift */,
-				E4673A961CFF13A80061E983 /* RxStarscream */,
-				E4673A951CFF13A80061E983 /* Products */,
+				E4AA5DC91CFF187700D89EE0 /* RxStarscream */,
+				E4AA5DC81CFF187700D89EE0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E4673A951CFF13A80061E983 /* Products */ = {
+		E4AA5DC81CFF187700D89EE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4673A941CFF13A80061E983 /* RxStarscream.framework */,
+				E4AA5DC71CFF187700D89EE0 /* RxStarscream.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E4673A961CFF13A80061E983 /* RxStarscream */ = {
+		E4AA5DC91CFF187700D89EE0 /* RxStarscream */ = {
 			isa = PBXGroup;
 			children = (
-				E4673A971CFF13A80061E983 /* RxStarscream.h */,
-				E4673A991CFF13A80061E983 /* Info.plist */,
+				E4AA5DCA1CFF187700D89EE0 /* RxStarscream.h */,
+				E4AA5DD21CFF189B00D89EE0 /* MySuperCoolClass.swift */,
+				E4AA5DCC1CFF187700D89EE0 /* Info.plist */,
 			);
 			path = RxStarscream;
 			sourceTree = "<group>";
@@ -58,25 +58,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E4673A911CFF13A80061E983 /* Headers */ = {
+		E4AA5DC41CFF187700D89EE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4673A981CFF13A80061E983 /* RxStarscream.h in Headers */,
+				E4AA5DCB1CFF187700D89EE0 /* RxStarscream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E4673A931CFF13A80061E983 /* RxStarscream */ = {
+		E4AA5DC61CFF187700D89EE0 /* RxStarscream */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4673A9C1CFF13A80061E983 /* Build configuration list for PBXNativeTarget "RxStarscream" */;
+			buildConfigurationList = E4AA5DCF1CFF187700D89EE0 /* Build configuration list for PBXNativeTarget "RxStarscream" */;
 			buildPhases = (
-				E4673A8F1CFF13A80061E983 /* Sources */,
-				E4673A901CFF13A80061E983 /* Frameworks */,
-				E4673A911CFF13A80061E983 /* Headers */,
-				E4673A921CFF13A80061E983 /* Resources */,
+				E4AA5DC21CFF187700D89EE0 /* Sources */,
+				E4AA5DC31CFF187700D89EE0 /* Frameworks */,
+				E4AA5DC41CFF187700D89EE0 /* Headers */,
+				E4AA5DC51CFF187700D89EE0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,42 +84,42 @@
 			);
 			name = RxStarscream;
 			productName = RxStarscream;
-			productReference = E4673A941CFF13A80061E983 /* RxStarscream.framework */;
+			productReference = E4AA5DC71CFF187700D89EE0 /* RxStarscream.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E4673A8B1CFF13A80061E983 /* Project object */ = {
+		E4AA5DBE1CFF187700D89EE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Guy Kahlon";
 				TargetAttributes = {
-					E4673A931CFF13A80061E983 = {
+					E4AA5DC61CFF187700D89EE0 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
-			buildConfigurationList = E4673A8E1CFF13A80061E983 /* Build configuration list for PBXProject "RxStarscream" */;
+			buildConfigurationList = E4AA5DC11CFF187700D89EE0 /* Build configuration list for PBXProject "RxStarscream" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E4673A8A1CFF13A80061E983;
-			productRefGroup = E4673A951CFF13A80061E983 /* Products */;
+			mainGroup = E4AA5DBD1CFF187700D89EE0;
+			productRefGroup = E4AA5DC81CFF187700D89EE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E4673A931CFF13A80061E983 /* RxStarscream */,
+				E4AA5DC61CFF187700D89EE0 /* RxStarscream */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E4673A921CFF13A80061E983 /* Resources */ = {
+		E4AA5DC51CFF187700D89EE0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,18 +129,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E4673A8F1CFF13A80061E983 /* Sources */ = {
+		E4AA5DC21CFF187700D89EE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4673AA01CFF13BF0061E983 /* Test.swift in Sources */,
+				E4AA5DD31CFF189B00D89EE0 /* MySuperCoolClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E4673A9A1CFF13A80061E983 /* Debug */ = {
+		E4AA5DCD1CFF187700D89EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -189,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		E4673A9B1CFF13A80061E983 /* Release */ = {
+		E4AA5DCE1CFF187700D89EE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,7 +231,7 @@
 			};
 			name = Release;
 		};
-		E4673A9D1CFF13A80061E983 /* Debug */ = {
+		E4AA5DD01CFF187700D89EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -242,14 +242,14 @@
 				INFOPLIST_FILE = RxStarscream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscream.RxStarscream;
+				PRODUCT_BUNDLE_IDENTIFIER = com..RxStarscream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		E4673A9E1CFF13A80061E983 /* Release */ = {
+		E4AA5DD11CFF187700D89EE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -260,7 +260,7 @@
 				INFOPLIST_FILE = RxStarscream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscream.RxStarscream;
+				PRODUCT_BUNDLE_IDENTIFIER = com..RxStarscream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -269,24 +269,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4673A8E1CFF13A80061E983 /* Build configuration list for PBXProject "RxStarscream" */ = {
+		E4AA5DC11CFF187700D89EE0 /* Build configuration list for PBXProject "RxStarscream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4673A9A1CFF13A80061E983 /* Debug */,
-				E4673A9B1CFF13A80061E983 /* Release */,
+				E4AA5DCD1CFF187700D89EE0 /* Debug */,
+				E4AA5DCE1CFF187700D89EE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4673A9C1CFF13A80061E983 /* Build configuration list for PBXNativeTarget "RxStarscream" */ = {
+		E4AA5DCF1CFF187700D89EE0 /* Build configuration list for PBXNativeTarget "RxStarscream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4673A9D1CFF13A80061E983 /* Debug */,
-				E4673A9E1CFF13A80061E983 /* Release */,
+				E4AA5DD01CFF187700D89EE0 /* Debug */,
+				E4AA5DD11CFF187700D89EE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E4673A8B1CFF13A80061E983 /* Project object */;
+	rootObject = E4AA5DBE1CFF187700D89EE0 /* Project object */;
 }
