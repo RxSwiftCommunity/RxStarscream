@@ -1,5 +1,4 @@
 //
-//  Created by Jesse Squires
 //  Guy Kahlon
 //
 

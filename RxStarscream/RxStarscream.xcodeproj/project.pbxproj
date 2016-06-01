@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		E4673A501CFEFADA0061E983 /* RxStarscream.h in Headers */ = {isa = PBXBuildFile; fileRef = E4673A4F1CFEFADA0061E983 /* RxStarscream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4673A581CFEFB000061E983 /* RxStarscream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4673A571CFEFB000061E983 /* RxStarscream.swift */; };
-		E4673A5D1CFF01980061E983 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4673A5C1CFF01980061E983 /* RxSwift.framework */; };
-		E4673A5F1CFF043A0061E983 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4673A5E1CFF043A0061E983 /* Starscream.framework */; };
+		E4673A841CFF075E0061E983 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4673A821CFF075D0061E983 /* RxSwift.framework */; };
+		E4673A851CFF075E0061E983 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4673A831CFF075E0061E983 /* Starscream.framework */; };
+		E4673A871CFF0B5E0061E983 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = E4673A591CFEFDB70061E983 /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +20,8 @@
 		E4673A511CFEFADA0061E983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4673A571CFEFB000061E983 /* RxStarscream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxStarscream.swift; sourceTree = "<group>"; };
 		E4673A591CFEFDB70061E983 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		E4673A5C1CFF01980061E983 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		E4673A5E1CFF043A0061E983 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		E4673A821CFF075D0061E983 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E4673A831CFF075E0061E983 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,8 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4673A5F1CFF043A0061E983 /* Starscream.framework in Frameworks */,
-				E4673A5D1CFF01980061E983 /* RxSwift.framework in Frameworks */,
+				E4673A841CFF075E0061E983 /* RxSwift.framework in Frameworks */,
+				E4673A851CFF075E0061E983 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,11 +40,10 @@
 		E4673A421CFEFADA0061E983 = {
 			isa = PBXGroup;
 			children = (
-				E4673A5E1CFF043A0061E983 /* Starscream.framework */,
-				E4673A5C1CFF01980061E983 /* RxSwift.framework */,
 				E4673A591CFEFDB70061E983 /* Cartfile */,
 				E4673A4E1CFEFADA0061E983 /* RxStarscream */,
 				E4673A4D1CFEFADA0061E983 /* Products */,
+				E4673A861CFF08580061E983 /* Dependency Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +63,15 @@
 				E4673A571CFEFB000061E983 /* RxStarscream.swift */,
 			);
 			path = RxStarscream;
+			sourceTree = "<group>";
+		};
+		E4673A861CFF08580061E983 /* Dependency Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4673A821CFF075D0061E983 /* RxSwift.framework */,
+				E4673A831CFF075E0061E983 /* Starscream.framework */,
+			);
+			name = "Dependency Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4673A871CFF0B5E0061E983 /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
