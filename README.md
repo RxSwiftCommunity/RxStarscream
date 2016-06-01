@@ -2,7 +2,9 @@
 
 A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream) to track subscribe to websocket events with RxSwift.
 
-### Installation - CocoaPods
+## Installation - 
+
+###CocoaPods
 
 RxStarscream is available through [CocoaPods](http://cocoapods.org/).
 
@@ -16,8 +18,16 @@ To use RxStarscream in your project add the following 'Podfile' to your project
 	pod 'RxStarscream'
 
 Then run:
-    pod install
+	pod install
 
+###Carthage
+
+Add this to Cartfile
+
+	github "GuyKahlon/RxStarscream" >= 0.4
+
+Then run:
+	carthage update
 
 ## Usage examples
 
