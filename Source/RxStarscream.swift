@@ -1,7 +1,7 @@
 //
-//  Created by Jesse Squires
-//  Guy Kahlon
+//  Created by Guy Kahlon
 //
+
 
 import Foundation
 import RxSwift
