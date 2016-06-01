@@ -14,9 +14,9 @@ public enum WebSocketEvent {
   case Pong
 }
 
-extension WebSocket {
+public extension WebSocket {
   
-  static public func rx_webSocket(url: NSURL, protocols: [String]? = nil) -> Observable<WebSocket> {
+  public static func rx_webSocket(url: NSURL, protocols: [String]? = nil) -> Observable<WebSocket> {
     
     return Observable.create { observer in
       
@@ -36,7 +36,7 @@ var textKey: UInt8  = 0
 var dataKey: UInt8  = 0
 var pongKey: UInt8  = 0
 
-extension WebSocket {
+public extension WebSocket {
   
   public var rx_connect: Observable<Void> {
     
@@ -157,7 +157,7 @@ extension WebSocket {
   }
 }
 
-extension WebSocket {
+public extension WebSocket {
   
   func memoize<D>(key: UnsafePointer<Void>, createLazily: () -> Observable<D>) -> Observable<D> {
     objc_sync_enter(self); defer { objc_sync_exit(self) }
