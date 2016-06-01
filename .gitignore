@@ -21,6 +21,6 @@ DerivedData
 # AppCode
 .idea/
 
-RxStarscream/Carthage/Build
-RxStarscream/Carthage/Checkouts
+Carthage/Build
+Carthage/Checkouts
 Demo/Pods
