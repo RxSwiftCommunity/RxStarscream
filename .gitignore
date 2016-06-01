@@ -22,4 +22,5 @@ DerivedData
 .idea/
 
 RxStarscream/Carthage/Build
+RxStarscream/Carthage/Checkouts
 Demo/Pods
