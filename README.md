@@ -97,6 +97,10 @@ Follow me on Twitter (@guykahlon)
 
 Everyone in the RxSwift Slack channel.
 
+## Contributing
+
+Bug reports and pull requests are welcome.
+
 ## License
 
 RxStarscream is available under the MIT license. See the LICENSE file for more info.
