@@ -6,15 +6,15 @@
 
 RxStarscream with RxSwift 
 =========================================================================================================================
-A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream) to track subscribe to websocket events with RxSwift.
+A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream) to track websocket events using RxSwift observables.
 
-## Installation - 
+## Installation
 
 ###CocoaPods
 
 RxStarscream is available through [CocoaPods](http://cocoapods.org/).
 
-Check out [Get Started](http://cocoapods.org/) tab on [cocoapods.org](http://cocoapods.org/).
+Check out the [Get Started](http://cocoapods.org/) tab on [cocoapods.org](http://cocoapods.org/) if this is the first time you're using CocoaPods.
 
 To use RxStarscream in your project add the following 'Podfile' to your project
 
@@ -37,7 +37,7 @@ Then run:
 
 ## Usage examples
 
-After instal via CococPods, you should import the framework.
+After instal via CococPods or Carthage, you should import the framework.
 
 ```swift
 import RxStarscream
@@ -50,7 +50,7 @@ Once imported, you can open a connection to your WebSocket server.
 socket = RxWebSocket(url: NSURL(string: "ws://localhost:8080/")!)
 socket.connect()
 ```
-Now you can subscribe to all websocket events:
+Now you can subscribe e.g to all of the websocket events:
 
 ```swift
 socket.rx_response.subscribeNext { (response: WebSocketEvent) in
@@ -69,7 +69,7 @@ socket.rx_response.subscribeNext { (response: WebSocketEvent) in
 }.addDisposableTo(disposeBag)
 ```
 
-Or just for a Message event:
+Or just to a message event:
 
 ```swift
 socket.rx_text.subscribeNext { (message: String) in        
@@ -80,7 +80,7 @@ socket.rx_text.subscribeNext { (message: String) in
 
 ## Sample Project
 
-There's a sample project (with carthage). 
+There's a sample project (you need to run `carthage update` for it to compile). 
 
 Tne sample project use echo server - https://www.websocket.org/echo.html 
 
