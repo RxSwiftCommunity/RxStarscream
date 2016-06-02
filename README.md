@@ -87,7 +87,7 @@ Guy Kahlon, guykahlon@gmail.com.
 Follow me on Twitter (@guykahlon)
 
 
-Thanks
+## Thanks
 
 Everyone in the RxSwift Slack channel.
 
