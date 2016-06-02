@@ -1,5 +1,11 @@
-# RxStarscream with RxSwift
 
+<p align="center">
+  <img src="https://github.com/GuyKahlon/RxStarscream/blob/master/SampleApp/Assets.xcassets/RxStarscreamIcon.imageset/RxStarscreamIcon.png" width="90" height="90"> 
+</p>
+
+
+RxStarscream with RxSwift 
+=========================================================================================================================
 A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream) to track subscribe to websocket events with RxSwift.
 
 ## Installation - 
