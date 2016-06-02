@@ -4,6 +4,7 @@
 
 import UIKit
 import RxSwift
+import Starscream
 
 class ViewController: UIViewController {
   
@@ -12,7 +13,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var logTextView: UITextView!
   
   let disposeBag = DisposeBag()
-  let socket = RxWebSocket(url: NSURL(string: "wss://echo.websocket.org")!)
+  let socket = WebSocket(url: NSURL(string: "wss://echo.websocket.org")!)
   
   override func viewDidLoad() {
     super.viewDidLoad()
