@@ -16,7 +16,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RxStarscreamIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1v4-gh-RRB">
+                                <rect key="frame" x="206" y="206" width="189" height="189"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1v4-gh-RRB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RFw-gX-tkm"/>
+                            <constraint firstItem="1v4-gh-RRB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="d6D-4I-4dN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +33,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RxStarscreamIcon" width="189" height="189"/>
+    </resources>
 </document>

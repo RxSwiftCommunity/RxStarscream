@@ -1,9 +1,5 @@
 //
-//  RxStarscream.h
-//  RxStarscream
-//
-//  Created by Guy Reporty on 01/06/2016.
-//  Copyright © 2016 Guy Kahlon. All rights reserved.
+//  Created by Guy Kahlon.
 //
 
 #import <UIKit/UIKit.h>
