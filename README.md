@@ -72,12 +72,24 @@ socket.rx_text.subscribeNext { (message: String) in
 ```
       
 
+## Sample Project
+
+There's a sample project (with carthage). 
+
+Tne sample project use echo server - https://www.websocket.org/echo.html 
+
+Have fun!
+
 ## Author
 
 Guy Kahlon, guykahlon@gmail.com.
 
 Follow me on Twitter (@guykahlon)
 
+
+Thanks
+
+Everyone in the RxSwift Slack channel.
 
 ## License
 
