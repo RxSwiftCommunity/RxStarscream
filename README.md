@@ -30,7 +30,7 @@ Then run:
 
 Add this to Cartfile
 
-	github "GuyKahlon/RxStarscream" >= 0.4
+	github "RxSwiftCommunity/RxStarscream" >= 0.4
 
 Then run:
 	carthage update
@@ -85,13 +85,6 @@ There's a sample project (you need to run `carthage update` for it to compile).
 Tne sample project use echo server - https://www.websocket.org/echo.html 
 
 Have fun!
-
-## Author
-
-Guy Kahlon, guykahlon@gmail.com.
-
-Follow me on Twitter (@guykahlon)
-
 
 ## Thanks
 
