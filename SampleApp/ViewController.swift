@@ -4,6 +4,7 @@
 
 import UIKit
 import RxSwift
+import Starscream
 
 class ViewController: UIViewController {
   
@@ -12,55 +13,53 @@ class ViewController: UIViewController {
   @IBOutlet weak var logTextView: UITextView!
   
   let disposeBag = DisposeBag()
-  let socket = RxWebSocket(url: NSURL(string: "wss://echo.websocket.org")!)
+  let socket = WebSocket(url: URL(string: "wss://echo.websocket.org")!)
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    socket.rx_response
-      .subscribeNext { [weak self] (response: WebSocketEvent) in
+    socket.rx.response.subscribe(onNext: { [weak self] (response: WebSocketEvent) in
         
         guard let `self` = self else {
           return
         }
         
         switch response {
-        case .Connected:
+        case .connected:
           self.logTextView.text = self.logTextView.text + "Connected\n"
-        case .Disconnected(let error):
+        case .disconnected(let error):
           self.logTextView.text = self.logTextView.text + "Disconnected with optional error: \(error) \n "
-        case .Message(let msg):
+        case .message(let msg):
           self.logTextView.text = self.logTextView.text + "RESPONSE (Message): \(msg) \n"
-        case .Data(let data):
+        case .data(let data):
           self.logTextView.text = self.logTextView.text + "RESPONSE (Data): \(data) \n"
-        case .Pong:
+        case .pong:
           self.logTextView.text = self.logTextView.text + "RESPONSE (Pong)"
         }
-      }.addDisposableTo(disposeBag)
+      }).addDisposableTo(disposeBag)
     
     socket.connect()
   }
 
   @IBAction func sendButtonAction(sender: UIButton) {
-    if let text = inputTextField.text where !text.isEmpty {
-      sendMessage(text)
+    if let text = inputTextField.text, !text.isEmpty {
+      sendMessage(message: text)
     }
   }
   
-  private func sendMessage(message: String) {
-    socket.writeString(message)
+  fileprivate func sendMessage(message: String) {
+    socket.write(string: message)
     logTextView.text = logTextView.text + "SENT: \(message) \n"
     inputTextField.text = nil
     inputTextField.resignFirstResponder()
   }
 }
 
-
 extension ViewController: UITextFieldDelegate {
   
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
-    if let text = textField.text where !text.isEmpty {
-      sendMessage(text)
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if let text = textField.text, !text.isEmpty {
+      sendMessage(message: text)
       return true
     }
     return false
