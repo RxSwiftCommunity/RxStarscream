@@ -18,7 +18,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    socket.rx.response.subscribe(onNext: { [weak self] (response: WebSocketEvent) in
+    socket.rx.response
+      .subscribe(onNext: { [weak self] (response: WebSocketEvent) in
         
         guard let `self` = self else {
           return
