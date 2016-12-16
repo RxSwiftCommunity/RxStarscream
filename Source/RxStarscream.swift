@@ -4,101 +4,95 @@
 
 import Foundation
 import RxSwift
-import Starscream
-
-import Foundation
-import RxSwift
+import RxCocoa
 import Starscream
 
 public enum WebSocketEvent {
-  case Connected
-  case Disconnected(NSError?)
-  case Message(String)
-  case Data(NSData)
-  case Pong
+  case connected
+  case disconnected(NSError?)
+  case message(String)
+  case data(Foundation.Data)
+  case pong
 }
 
-public class RxWebSocket: WebSocket {
-  
-  private let subject = PublishSubject<WebSocketEvent>()
-  private var forwardDelegate: WebSocketDelegate?
-  private var forwardPongDelegate: WebSocketPongDelegate?
-  
-  public override weak var delegate: WebSocketDelegate? {
-    didSet {
-      if delegate === self {
-        return
-      }
-      forwardDelegate = delegate
-      delegate = self
+public class RxWebSocketDelegateProxy: DelegateProxy,
+                                    WebSocketDelegate,
+                                    WebSocketPongDelegate,
+                                    DelegateProxyType {
+    
+    public static func setCurrentDelegate(_ delegate: AnyObject?, toObject object: AnyObject) {
+        let webSocket = object as! WebSocket
+        webSocket.delegate = delegate as! WebSocketDelegate?
     }
-  }
-  
-  public override weak var pongDelegate: WebSocketPongDelegate? {
-    didSet {
-      if pongDelegate === self {
-        return
-      }
-      forwardPongDelegate = pongDelegate
-      pongDelegate = self
+
+    public static func currentDelegateFor(_ object: AnyObject) -> AnyObject? {
+        let webSocket = object as! WebSocket
+        return webSocket.delegate
     }
-  }
-  
-  public private(set) lazy var rx_response: Observable<WebSocketEvent> = {
-    return self.subject
-  }()
-  
-  public private(set) lazy var rx_text: Observable<String> = {
-    return self.subject.filter { response in
-      switch response {
-      case .Message(_):
-        return true
-      default:
-        return false
-      }
-      }.map { response in
-        switch response {
-        case .Message(let message):
-          return message
-        default:
-          return String()
+    
+    private weak var forwardDelegate: WebSocketDelegate?
+    private weak var forwardPongDelegate: WebSocketPongDelegate?
+    
+    fileprivate let subject = PublishSubject<WebSocketEvent>()
+    
+    required public init(parentObject: AnyObject) {
+        let webSocket = parentObject as! WebSocket
+        self.forwardDelegate = webSocket.delegate
+        self.forwardPongDelegate = webSocket.pongDelegate
+        super.init(parentObject: parentObject)
+    }
+    
+    public func websocketDidConnect(socket: WebSocket) {
+        subject.on(.next(WebSocketEvent.connected))
+        forwardDelegate?.websocketDidConnect(socket: socket)
+    }
+    
+    public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
+        subject.on(.next(WebSocketEvent.disconnected(error)))
+        forwardDelegate?.websocketDidDisconnect(socket: socket, error: error)
+    }
+    
+    public func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+        subject.on(.next(WebSocketEvent.message(text)))
+        forwardDelegate?.websocketDidReceiveMessage(socket: socket, text: text)
+    }
+    
+    public func websocketDidReceiveData(socket: WebSocket, data: Data) {
+        subject.on(.next(WebSocketEvent.data(data)))
+        forwardDelegate?.websocketDidReceiveData(socket: socket, data: data)
+    }
+    
+    public func websocketDidReceivePong(socket: WebSocket, data: Data?) {
+        subject.on(.next(WebSocketEvent.pong))
+        forwardPongDelegate?.websocketDidReceivePong(socket: socket, data: data)
+    }
+    
+    deinit {
+        subject.on(.completed)
+    }
+}
+
+extension Reactive where Base: WebSocket {
+    
+    public var response: Observable<WebSocketEvent> {
+        return RxWebSocketDelegateProxy.proxyForObject(base).subject
+    }
+    
+    public var text: Observable<String> {
+        return self.response.filter { response in
+            switch response {
+            case .message(_):
+                return true
+            default:
+                return false
+            }
+        }.map { response in
+            switch response {
+            case .message(let message):
+                return message
+            default:
+                return String()
+            }
         }
     }
-  }()
-  
-  public override func connect() {
-    super.connect()
-    delegate = self
-    pongDelegate = self
-  }
-}
-
-extension RxWebSocket: WebSocketPongDelegate {
-  public func websocketDidReceivePong(socket: WebSocket) {
-    subject.on(.Next(WebSocketEvent.Pong))
-  }
-}
-
-extension RxWebSocket: WebSocketDelegate {
-  
-  public func websocketDidConnect(socket: WebSocket) {
-    subject.on(.Next(WebSocketEvent.Connected))
-    forwardDelegate?.websocketDidConnect(socket)
-  }
-  
-  public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-    subject.on(.Next(WebSocketEvent.Disconnected(error)))
-    forwardDelegate?.websocketDidDisconnect(socket, error: error)
-    socket.delegate = nil
-  }
-  
-  public func websocketDidReceiveMessage(socket: WebSocket, text: String) {
-    subject.on(.Next(WebSocketEvent.Message(text)))
-    forwardDelegate?.websocketDidReceiveMessage(socket, text: text)
-  }
-  
-  public func websocketDidReceiveData(socket: WebSocket, data: NSData) {
-    subject.on(.Next(WebSocketEvent.Data(data)))
-    forwardDelegate?.websocketDidReceiveData(socket, data: data)
-  }
 }
