@@ -95,6 +95,26 @@ extension Reactive where Base: WebSocket {
       }
     }
   }
+  
+  public var connected: Observable<Bool> {
+    return response.filter { response in
+      switch response {
+      case .connected:
+        return true
+      case .disconnected(_):
+        return true
+      default:
+        return false
+      }
+      }.map { response in
+        switch response {
+        case .connected:
+          return true
+        default:
+          return false
+        }
+    }
+  }
 
   public func write(data: Data) -> Observable<Void> {
     return Observable.create { sub in
