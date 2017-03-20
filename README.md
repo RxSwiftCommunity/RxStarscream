@@ -10,7 +10,7 @@ A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream)
 
 ## Installation
 
-###CocoaPods
+### CocoaPods
 
 RxStarscream is available through [CocoaPods](http://cocoapods.org/).
 
@@ -26,7 +26,7 @@ To use RxStarscream in your project add the following 'Podfile' to your project
 Then run:
 	pod install
 
-###Carthage
+### Carthage
 
 Add this to Cartfile
 
@@ -47,13 +47,13 @@ Once imported, you can open a connection to your WebSocket server.
 
 ```swift
 
-socket = RxWebSocket(url: NSURL(string: "ws://localhost:8080/")!)
+socket = WebSocket(url: NSURL(string: "ws://localhost:8080/")!)
 socket.connect()
 ```
 Now you can subscribe e.g to all of the websocket events:
 
 ```swift
-socket.rx_response.subscribeNext { (response: WebSocketEvent) in
+socket.rx.response.subscribeNext { (response: WebSocketEvent) in
 	switch response {
 	case .Connected:
 		print("Connected")
@@ -67,6 +67,15 @@ socket.rx_response.subscribeNext { (response: WebSocketEvent) in
 		print("Pong")
   	}
 }.addDisposableTo(disposeBag)
+```
+
+
+Or just to a connect event:
+
+```swift
+socket.rx.connected.subscribeNext { (isConnected: Bool) in        
+	print("Is connected : \(isConnected)")
+}.addDisposableTo(self.disposeBag)
 ```
 
 Or just to a message event:
