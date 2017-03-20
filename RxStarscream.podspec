@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.homepage         = 'https://github.com/RxSwiftCommunity/RxStarscream'
   spec.authors          = { 'Guy Kahlon' => 'guykahlon@gmail.com' }
   spec.summary          = 'A lightweight extension to subscribe Starscream websocket events with RxSwift.'
-  spec.source           = { :git => 'https://github.com/RxSwiftCommunity/RxStarscream.git', :tag => 0.3 }
+  spec.source           = { :git => 'https://github.com/RxSwiftCommunity/RxStarscream.git', :tag => 0.6 }
   spec.source_files     = 'Source/*.swift'
   spec.requires_arc     = true
   spec.ios.deployment_target = '8.0'
