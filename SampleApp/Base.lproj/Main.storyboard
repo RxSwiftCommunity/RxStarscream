@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="afO-f7-qjn">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="afO-f7-qjn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--WebSocket Sample Project-->
@@ -15,23 +19,20 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RxStarscreamIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ViI-xq-zum">
-                                <rect key="frame" x="206" y="206" width="189" height="189"/>
+                                <rect key="frame" x="93" y="239" width="189" height="189"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWo-uO-Ilj">
-                                <rect key="frame" x="20" y="72" width="36" height="30"/>
+                                <rect key="frame" x="16" y="72" width="36" height="30"/>
                                 <state key="normal" title="Send">
-                                    <color key="titleColor" red="0.89411764705882357" green="0.0" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.89411764705882357" green="0.0" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="sendButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fb2-gT-VL2"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GwT-Od-nJA">
-                                <rect key="frame" x="78" y="73" width="502" height="30"/>
+                                <rect key="frame" x="74" y="73" width="285" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                                 <connections>
@@ -39,19 +40,19 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Io-Xd-8Ne">
-                                <rect key="frame" x="20" y="121" width="44" height="26"/>
+                                <rect key="frame" x="16" y="121" width="44" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ijA-32-App">
-                                <rect key="frame" x="20" y="155" width="560" height="431"/>
+                                <rect key="frame" x="16" y="155" width="343" height="498"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RWo-uO-Ilj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9cg-KA-cFr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ijA-32-App" secondAttribute="leading" id="BOb-wZ-DRw"/>
@@ -68,10 +69,13 @@
                             <constraint firstAttribute="leadingMargin" secondItem="5Io-Xd-8Ne" secondAttribute="leading" id="yvz-Mi-NsX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="WebSocket Sample Project" id="hfZ-yl-lcD"/>
+                    <navigationItem key="navigationItem" title="WebSocket Sample Project" id="hfZ-yl-lcD">
+                        <barButtonItem key="rightBarButtonItem" title="pong" id="MU3-HA-tjb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="inputTextField" destination="GwT-Od-nJA" id="ZnV-tP-gVh"/>
                         <outlet property="logTextView" destination="ijA-32-App" id="Dfi-sm-rvy"/>
+                        <outlet property="pongButton" destination="MU3-HA-tjb" id="6bb-fm-BsD"/>
                         <outlet property="sendButton" destination="RWo-uO-Ilj" id="HRC-SU-kca"/>
                     </connections>
                 </viewController>
