@@ -3,9 +3,10 @@
   <img src="https://github.com/GuyKahlon/RxStarscream/blob/master/SampleApp/Assets.xcassets/RxStarscreamIcon.imageset/RxStarscreamIcon.png" width="90" height="90"> 
 </p>
 
-
 RxStarscream with RxSwift 
 =========================================================================================================================
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59143b0b0db7560001871050&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/59143b0b0db7560001871050/build/latest?branch=master)	
+
 A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream) to track websocket events using RxSwift observables.
 
 ## Installation

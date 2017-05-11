@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BEF3143F1E86D13C00C15DD4"
+               BuildableName = "RxStarscreamTests.xctest"
+               BlueprintName = "RxStarscreamTests"
+               ReferencedContainer = "container:RxStarscream.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E46D00251CFF22200054DF1F"
+            BuildableName = "RxStarscream.framework"
+            BlueprintName = "RxStarscream"
+            ReferencedContainer = "container:RxStarscream.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
