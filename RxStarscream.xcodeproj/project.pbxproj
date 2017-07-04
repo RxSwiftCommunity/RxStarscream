@@ -12,7 +12,6 @@
 		0B4DAAC91E04980000ECDBF9 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEF314431E86D13C00C15DD4 /* RxStarscreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */; };
 		BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46D00261CFF22200054DF1F /* RxStarscream.framework */; };
-		BEF3144D1E86DAFA00C15DD4 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */; };
 		BEF314521E86DB5700C15DD4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; };
 		BEF314541E86DB5700C15DD4 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */; };
 		BEF314551E86DB5700C15DD4 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
@@ -20,9 +19,7 @@
 		BEF314581E875D8500C15DD4 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEF314591E875D8500C15DD4 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEF3145B1E875DAA00C15DD4 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E40220391CFF3C6900C5A874 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; };
 		E402203A1CFF3C6900C5A874 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E402203B1CFF3C6900C5A874 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
 		E402203C1CFF3C6900C5A874 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E42144A41CFF275E00885498 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; };
 		E42144A51CFF275E00885498 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
@@ -117,10 +114,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42144ED1CFF3AC600885498 /* RxSwift.framework in Frameworks */,
-				E402203B1CFF3C6900C5A874 /* Starscream.framework in Frameworks */,
 				E42144EE1CFF3AC900885498 /* Starscream.framework in Frameworks */,
 				0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */,
-				E40220391CFF3C6900C5A874 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF3144D1E86DAFA00C15DD4 /* RxTest.framework in Frameworks */,
 				0B4DAAC71E0497BC00ECDBF9 /* RxCocoa.framework in Frameworks */,
 				E42144A41CFF275E00885498 /* RxSwift.framework in Frameworks */,
 				E42144A51CFF275E00885498 /* Starscream.framework in Frameworks */,
