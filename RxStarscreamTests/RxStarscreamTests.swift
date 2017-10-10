@@ -12,24 +12,6 @@ import RxTest
 import RxStarscream
 import Starscream
 
-extension WebSocketEvent: Equatable { }
-
-public func ==(lhs: WebSocketEvent, rhs: WebSocketEvent) -> Bool {
-    switch (lhs, rhs) {
-    case (.connected, .connected):
-        return true
-    case (.disconnected(let lhsError), .disconnected(let rhsError)):
-        return lhsError == rhsError
-    case (.message(let lhsMsg), .message(let rhsMsg)):
-        return lhsMsg == rhsMsg
-    case (.data(let lhsData), .data(let rhsData)):
-        return lhsData == rhsData
-    case (.pong, .pong):
-        return true
-    default:
-        return false
-    }
-}
 
 class RxStarscreamTests: XCTestCase {
 
