@@ -51,7 +51,7 @@ class RxStarscreamTests: XCTestCase {
         let scheduler = TestScheduler(initialClock: 0)
         connectedObserver = scheduler.createObserver(Bool.self)
 
-        let connected = socket.rx.connected.shareReplay(1)
+        let connected = socket.rx.connected.share(replay: 1)
         connected.subscribe(onNext: { [unowned self] _ in
                     self.socket.disconnect()
                 }).disposed(by: disposeBag)

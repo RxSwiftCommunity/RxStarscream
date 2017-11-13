@@ -1,4 +1,4 @@
-github "ReactiveX/RxSwift" "3.6.1"
+github "ReactiveX/RxSwift" "4.0.0"
 github "daltoniam/Starscream" "3.0.2"
 github "daltoniam/common-crypto-spm" "1.1.0"
 github "daltoniam/zlib-spm" "1.1.0"
