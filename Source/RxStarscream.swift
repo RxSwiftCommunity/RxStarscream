@@ -9,7 +9,7 @@ import Starscream
 
 public enum WebSocketEvent {
   case connected
-  case disconnected(NSError?)
+  case disconnected(Error?)
   case message(String)
   case data(Foundation.Data)
   case pong
@@ -43,27 +43,27 @@ public class RxWebSocketDelegateProxy: DelegateProxy,
         super.init(parentObject: parentObject)
     }
 
-    public func websocketDidConnect(socket: WebSocket) {
+    public func websocketDidConnect(socket: WebSocketClient) {
         subject.on(.next(WebSocketEvent.connected))
         forwardDelegate?.websocketDidConnect(socket: socket)
     }
 
-    public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
+    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         subject.on(.next(WebSocketEvent.disconnected(error)))
         forwardDelegate?.websocketDidDisconnect(socket: socket, error: error)
     }
 
-    public func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         subject.on(.next(WebSocketEvent.message(text)))
         forwardDelegate?.websocketDidReceiveMessage(socket: socket, text: text)
     }
 
-    public func websocketDidReceiveData(socket: WebSocket, data: Data) {
+    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         subject.on(.next(WebSocketEvent.data(data)))
         forwardDelegate?.websocketDidReceiveData(socket: socket, data: data)
     }
 
-    public func websocketDidReceivePong(socket: WebSocket, data: Data?) {
+    public func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
         subject.on(.next(WebSocketEvent.pong))
         forwardPongDelegate?.websocketDidReceivePong(socket: socket, data: data)
     }

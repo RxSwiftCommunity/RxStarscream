@@ -18,8 +18,8 @@ public func ==(lhs: WebSocketEvent, rhs: WebSocketEvent) -> Bool {
     switch (lhs, rhs) {
     case (.connected, .connected):
         return true
-    case (.disconnected(let lhsError), .disconnected(let rhsError)):
-        return lhsError == rhsError
+    case (.disconnected(_), .disconnected(_)):
+        return true
     case (.message(let lhsMsg), .message(let rhsMsg)):
         return lhsMsg == rhsMsg
     case (.data(let lhsData), .data(let rhsData)):
