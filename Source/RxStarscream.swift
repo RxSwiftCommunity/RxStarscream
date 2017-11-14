@@ -32,27 +32,27 @@ open class RxWebSocketDelegateProxy: DelegateProxy<WebSocket, WebSocketDelegate>
         super.init(parentObject: parentObject, delegateProxy: RxWebSocketDelegateProxy.self)
     }
 
-    public func websocketDidConnect(socket: WebSocketClient) {
+    public func websocketDidConnect(socket: WebSocket) {
         subject.on(.next(WebSocketEvent.connected))
         forwardDelegate?.websocketDidConnect(socket: socket)
     }
 
-    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+    public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
         subject.on(.next(WebSocketEvent.disconnected(error)))
         forwardDelegate?.websocketDidDisconnect(socket: socket, error: error)
     }
 
-    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+    public func websocketDidReceiveMessage(socket: WebSocket, text: String) {
         subject.on(.next(WebSocketEvent.message(text)))
         forwardDelegate?.websocketDidReceiveMessage(socket: socket, text: text)
     }
 
-    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+    public func websocketDidReceiveData(socket: WebSocket, data: Data) {
         subject.on(.next(WebSocketEvent.data(data)))
         forwardDelegate?.websocketDidReceiveData(socket: socket, data: data)
     }
 
-    public func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
+    public func websocketDidReceivePong(socket: WebSocket, data: Data?) {
         subject.on(.next(WebSocketEvent.pong))
         forwardPongDelegate?.websocketDidReceivePong(socket: socket, data: data)
     }
