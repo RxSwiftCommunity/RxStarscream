@@ -21,8 +21,8 @@ open class RxWebSocketDelegateProxy: DelegateProxy<WebSocket, WebSocketDelegate>
                                        DelegateProxyType {
     
 
-    private weak var forwardDelegate: WebSocketDelegate?
-    private weak var forwardPongDelegate: WebSocketPongDelegate?
+    public weak var forwardDelegate: WebSocketDelegate?
+    public weak var forwardPongDelegate: WebSocketPongDelegate?
 
     fileprivate let subject = PublishSubject<WebSocketEvent>()
     
