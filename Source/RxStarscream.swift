@@ -7,111 +7,110 @@ import RxSwift
 import RxCocoa
 import Starscream
 
+
 public enum WebSocketEvent {
-  case connected
-  case disconnected(NSError?)
-  case message(String)
-  case data(Foundation.Data)
-  case pong
+    case connected
+    case disconnected(Error?)
+    case message(String)
+    case data(Data)
+    case pong
 }
 
-public class RxWebSocketDelegateProxy: DelegateProxy,
-                                       WebSocketDelegate,
-                                       WebSocketPongDelegate,
-                                       DelegateProxyType {
-
-    public static func setCurrentDelegate(_ delegate: AnyObject?, toObject object: AnyObject) {
-        let webSocket = object as? WebSocket
-        webSocket?.delegate = delegate as? WebSocketDelegate
-        webSocket?.pongDelegate = delegate as? WebSocketPongDelegate
-    }
-
-    public static func currentDelegateFor(_ object: AnyObject) -> AnyObject? {
-        let webSocket = object as? WebSocket
-        return webSocket?.delegate
-    }
+public class RxWebSocketDelegateProxy: DelegateProxy<WebSocket, NSObjectProtocol>, DelegateProxyType, WebSocketDelegate, WebSocketPongDelegate {
 
     private weak var forwardDelegate: WebSocketDelegate?
     private weak var forwardPongDelegate: WebSocketPongDelegate?
 
     fileprivate let subject = PublishSubject<WebSocketEvent>()
 
-    required public init(parentObject: AnyObject) {
-        let webSocket = parentObject as? WebSocket
-        self.forwardDelegate = webSocket?.delegate
-        self.forwardPongDelegate = webSocket?.pongDelegate
-        super.init(parentObject: parentObject)
+    required public init(websocket: WebSocket) {
+        super.init(parentObject: websocket, delegateProxy: RxWebSocketDelegateProxy.self)
     }
 
-    public func websocketDidConnect(socket: WebSocket) {
-        subject.on(.next(WebSocketEvent.connected))
+    public static func currentDelegate(for object: WebSocket) -> NSObjectProtocol? {
+        return object.delegate as? NSObjectProtocol
+    }
+
+    public static func setCurrentDelegate(_ delegate: NSObjectProtocol?, to object: WebSocket) {
+        object.delegate = delegate as? WebSocketDelegate
+        object.pongDelegate = delegate as? WebSocketPongDelegate
+    }
+
+    public static func registerKnownImplementations() {
+        self.register { RxWebSocketDelegateProxy(websocket: $0) }
+    }
+
+    public func websocketDidConnect(socket: WebSocketClient) {
+        subject.onNext(WebSocketEvent.connected)
         forwardDelegate?.websocketDidConnect(socket: socket)
     }
 
-    public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-        subject.on(.next(WebSocketEvent.disconnected(error)))
+    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        subject.onNext(WebSocketEvent.disconnected(error))
         forwardDelegate?.websocketDidDisconnect(socket: socket, error: error)
     }
 
-    public func websocketDidReceiveMessage(socket: WebSocket, text: String) {
-        subject.on(.next(WebSocketEvent.message(text)))
+    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        subject.onNext(WebSocketEvent.message(text))
         forwardDelegate?.websocketDidReceiveMessage(socket: socket, text: text)
     }
 
-    public func websocketDidReceiveData(socket: WebSocket, data: Data) {
-        subject.on(.next(WebSocketEvent.data(data)))
+    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        subject.onNext(WebSocketEvent.data(data))
         forwardDelegate?.websocketDidReceiveData(socket: socket, data: data)
     }
 
-    public func websocketDidReceivePong(socket: WebSocket, data: Data?) {
-        subject.on(.next(WebSocketEvent.pong))
+    public func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
+        subject.onNext(WebSocketEvent.pong)
         forwardPongDelegate?.websocketDidReceivePong(socket: socket, data: data)
     }
 
     deinit {
-        subject.on(.completed)
+        subject.onCompleted()
     }
 }
 
 extension Reactive where Base: WebSocket {
 
     public var response: Observable<WebSocketEvent> {
-        return RxWebSocketDelegateProxy.proxyForObject(base).subject
+        return RxWebSocketDelegateProxy.proxy(for: base).subject
     }
 
     public var text: Observable<String> {
-        return self.response.filter { response in
-            switch response {
-            case .message(_):
-                return true
-            default:
-                return false
-            }
-        }.map { response in
-            switch response {
-            case .message(let message):
-                return message
-            default:
-                return String()
-            }
+        return self.response
+            .filter {
+                switch $0 {
+                case .message:
+                    return true
+                default:
+                    return false
+                }}
+            .map {
+                switch $0 {
+                case .message(let message):
+                    return message
+                default:
+                    return String()
+                }
         }
     }
 
     public var connected: Observable<Bool> {
-        return response.filter { response in
-            switch response {
-            case .connected, .disconnected(_):
-                return true
-            default:
-                return false
-            }
-        }.map { response in
-            switch response {
-            case .connected:
-                return true
-            default:
-                return false
-            }
+        return response
+            .filter {
+                switch $0 {
+                case .connected, .disconnected:
+                    return true
+                default:
+                    return false
+                }}
+            .map {
+                switch $0 {
+                case .connected:
+                    return true
+                default:
+                    return false
+                }
         }
     }
 
@@ -121,6 +120,7 @@ extension Reactive where Base: WebSocket {
                 sub.onNext(())
                 sub.onCompleted()
             }
+
             return Disposables.create()
         }
     }
@@ -131,6 +131,7 @@ extension Reactive where Base: WebSocket {
                 sub.onNext(())
                 sub.onCompleted()
             }
+
             return Disposables.create()
         }
     }
@@ -141,7 +142,9 @@ extension Reactive where Base: WebSocket {
                 sub.onNext(())
                 sub.onCompleted()
             }
+
             return Disposables.create()
         }
     }
 }
+
