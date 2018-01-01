@@ -7,9 +7,34 @@ import RxSwift
 import RxCocoa
 import Starscream
 
+public enum WebSocketEventError: Error {
+    case disconnected
+}
+
+extension WebSocketEventError: Equatable {
+    public static func ==(lhs: WebSocketEventError, rhs: WebSocketEventError) -> Bool {
+        var result = false
+        switch (lhs, rhs) {
+        case (.disconnected, .disconnected):
+            result = true
+        }
+        return result
+    }
+}
+
+extension WebSocketEventError: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .disconnected:
+            return "Disconnected"
+        }
+    }
+}
+
+
 public enum WebSocketEvent {
   case connected
-  case disconnected(NSError?)
+  case disconnected(WebSocketEventError?)
   case message(String)
   case data(Foundation.Data)
   case pong
@@ -43,27 +68,28 @@ public class RxWebSocketDelegateProxy: DelegateProxy,
         super.init(parentObject: parentObject)
     }
 
-    public func websocketDidConnect(socket: WebSocket) {
+    public func websocketDidConnect(socket: WebSocketClient) {
         subject.on(.next(WebSocketEvent.connected))
         forwardDelegate?.websocketDidConnect(socket: socket)
     }
-
-    public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-        subject.on(.next(WebSocketEvent.disconnected(error)))
+    
+    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        
+        subject.on(.next(WebSocketEvent.disconnected(WebSocketEventError.disconnected)))
         forwardDelegate?.websocketDidDisconnect(socket: socket, error: error)
     }
 
-    public func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         subject.on(.next(WebSocketEvent.message(text)))
         forwardDelegate?.websocketDidReceiveMessage(socket: socket, text: text)
     }
 
-    public func websocketDidReceiveData(socket: WebSocket, data: Data) {
+    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         subject.on(.next(WebSocketEvent.data(data)))
         forwardDelegate?.websocketDidReceiveData(socket: socket, data: data)
     }
-
-    public func websocketDidReceivePong(socket: WebSocket, data: Data?) {
+    
+    public func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
         subject.on(.next(WebSocketEvent.pong))
         forwardPongDelegate?.websocketDidReceivePong(socket: socket, data: data)
     }
@@ -71,6 +97,26 @@ public class RxWebSocketDelegateProxy: DelegateProxy,
     deinit {
         subject.on(.completed)
     }
+}
+
+extension WebSocketEvent: Equatable {
+    public static func ==(lhs: WebSocketEvent, rhs: WebSocketEvent) -> Bool {
+        switch (lhs, rhs) {
+        case (.connected, .connected):
+            return true
+        case (let .disconnected(lhsError), let .disconnected(rhsError)):
+            return lhsError == rhsError
+        case (.message(let lhsMsg), .message(let rhsMsg)):
+            return lhsMsg == rhsMsg
+        case (.data(let lhsData), .data(let rhsData)):
+            return lhsData == rhsData
+        case (.pong, .pong):
+            return true
+        default:
+            return false
+        }
+    }
+
 }
 
 extension Reactive where Base: WebSocket {
