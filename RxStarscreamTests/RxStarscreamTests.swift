@@ -9,8 +9,8 @@
 import XCTest
 import RxSwift
 import RxTest
-import RxStarscream
 import Starscream
+import RxStarscream
 
 extension WebSocketEvent: Equatable { }
 
@@ -19,7 +19,7 @@ public func ==(lhs: WebSocketEvent, rhs: WebSocketEvent) -> Bool {
     case (.connected, .connected):
         return true
     case (.disconnected(let lhsError), .disconnected(let rhsError)):
-        return lhsError == rhsError
+        return lhsError?.localizedDescription == rhsError?.localizedDescription // TO REVIEW
     case (.message(let lhsMsg), .message(let rhsMsg)):
         return lhsMsg == rhsMsg
     case (.data(let lhsData), .data(let rhsData)):
@@ -51,7 +51,7 @@ class RxStarscreamTests: XCTestCase {
         let scheduler = TestScheduler(initialClock: 0)
         connectedObserver = scheduler.createObserver(Bool.self)
 
-        let connected = socket.rx.connected.shareReplay(1)
+        let connected = socket.rx.connected.share(replay: 1)
         connected.subscribe(onNext: { [unowned self] _ in
                     self.socket.disconnect()
                 }).disposed(by: disposeBag)
