@@ -1,0 +1,16 @@
+machine:
+  xcode:
+    version: 9.1
+  environment:
+    LANG: en_US.UTF-8
+
+dependencies:
+  override:
+    - carthage bootstrap
+  cache_directories:
+    - "Carthage" # Cache carthage to speed up builds.
+test:
+  pre:
+    - set -o pipefail
+  override:
+    - xcodebuild test -scheme RxStarscream -project RxStarscream.xcodeproj -sdk iphonesimulator -destination "name=iPhone X" | xcpretty -c
