@@ -84,7 +84,8 @@ extension Reactive where Base: WebSocket {
                     return true
                 default:
                     return false
-                }}
+                }
+            }
             .map {
                 switch $0 {
                 case .message(let message):
@@ -103,7 +104,8 @@ extension Reactive where Base: WebSocket {
                     return true
                 default:
                     return false
-                }}
+                }
+            }
             .map {
                 switch $0 {
                 case .connected:
@@ -147,4 +149,3 @@ extension Reactive where Base: WebSocket {
         }
     }
 }
-

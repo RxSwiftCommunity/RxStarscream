@@ -20,7 +20,9 @@ DerivedData
 *.xccheckout
 # AppCode
 .idea/
+# Framworks
+*.framework
+
 
 Carthage/Build
 Carthage/Checkouts
-
