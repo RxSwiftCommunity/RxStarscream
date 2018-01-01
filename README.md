@@ -1,11 +1,12 @@
-
 <p align="center">
   <img src="https://github.com/GuyKahlon/RxStarscream/blob/master/SampleApp/Assets.xcassets/RxStarscreamIcon.imageset/RxStarscreamIcon.png" width="90" height="90"> 
 </p>
 
-RxStarscream with RxSwift 
+RxStarscream
 =========================================================================================================================
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59143b0b0db7560001871050&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/59143b0b0db7560001871050/build/latest?branch=master)	
+[![CircleCI](https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxStarscream/master.svg)](https://circleci.com/gh/RxSwiftCommunity/RxStarscream/tree/master)
+![pod](https://img.shields.io/cocoapods/v/RxStarscream.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream) to track websocket events using RxSwift observables.
 
