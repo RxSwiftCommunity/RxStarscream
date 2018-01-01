@@ -9,9 +9,9 @@ Pod::Spec.new do |spec|
   spec.source_files     = 'Source/*.swift'
   spec.requires_arc     = true
   spec.ios.deployment_target = '8.0'
-  spec.dependency 'Starscream', '~> 2.0'
-  spec.dependency 'RxSwift', '~> 3.4'
-  spec.dependency 'RxCocoa', '~> 3.4'
+  spec.dependency 'Starscream', '~> 2.1.1'
+  spec.dependency 'RxSwift', '~> 4.0'
+  spec.dependency 'RxCocoa', '~> 4.0'
   spec.license      = { :type => 'Apache License, Version 2.0', :text => <<-LICENSE
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

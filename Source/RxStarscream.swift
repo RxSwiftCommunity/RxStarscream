@@ -9,38 +9,27 @@ import Starscream
 
 public enum WebSocketEvent {
   case connected
-  case disconnected(NSError?)
+  case disconnected(Error?)
   case message(String)
   case data(Foundation.Data)
   case pong
 }
 
-public class RxWebSocketDelegateProxy: DelegateProxy,
+open class RxWebSocketDelegateProxy: DelegateProxy<WebSocket, WebSocketDelegate>,
                                        WebSocketDelegate,
                                        WebSocketPongDelegate,
                                        DelegateProxyType {
+    
 
-    public static func setCurrentDelegate(_ delegate: AnyObject?, toObject object: AnyObject) {
-        let webSocket = object as? WebSocket
-        webSocket?.delegate = delegate as? WebSocketDelegate
-        webSocket?.pongDelegate = delegate as? WebSocketPongDelegate
-    }
-
-    public static func currentDelegateFor(_ object: AnyObject) -> AnyObject? {
-        let webSocket = object as? WebSocket
-        return webSocket?.delegate
-    }
-
-    private weak var forwardDelegate: WebSocketDelegate?
-    private weak var forwardPongDelegate: WebSocketPongDelegate?
+    public weak var forwardDelegate: WebSocketDelegate?
+    public weak var forwardPongDelegate: WebSocketPongDelegate?
 
     fileprivate let subject = PublishSubject<WebSocketEvent>()
-
-    required public init(parentObject: AnyObject) {
-        let webSocket = parentObject as? WebSocket
-        self.forwardDelegate = webSocket?.delegate
-        self.forwardPongDelegate = webSocket?.pongDelegate
-        super.init(parentObject: parentObject)
+    
+    required public init(parentObject: WebSocket) {
+        self.forwardDelegate = parentObject.delegate
+        self.forwardPongDelegate = parentObject.pongDelegate
+        super.init(parentObject: parentObject, delegateProxy: RxWebSocketDelegateProxy.self)
     }
 
     public func websocketDidConnect(socket: WebSocket) {
@@ -67,6 +56,19 @@ public class RxWebSocketDelegateProxy: DelegateProxy,
         subject.on(.next(WebSocketEvent.pong))
         forwardPongDelegate?.websocketDidReceivePong(socket: socket, data: data)
     }
+    
+    public static func registerKnownImplementations() {
+        self.register { RxWebSocketDelegateProxy(parentObject: $0) }
+    }
+    
+    public static func currentDelegate(for object: WebSocket) -> WebSocketDelegate? {
+        return object.delegate
+    }
+    
+    public static func setCurrentDelegate(_ delegate: WebSocketDelegate?, to object: WebSocket) {
+        object.delegate = delegate
+        object.pongDelegate = delegate as? WebSocketPongDelegate
+    }
 
     deinit {
         subject.on(.completed)
@@ -76,7 +78,7 @@ public class RxWebSocketDelegateProxy: DelegateProxy,
 extension Reactive where Base: WebSocket {
 
     public var response: Observable<WebSocketEvent> {
-        return RxWebSocketDelegateProxy.proxyForObject(base).subject
+        return RxWebSocketDelegateProxy.proxy(for: base).subject
     }
 
     public var text: Observable<String> {
