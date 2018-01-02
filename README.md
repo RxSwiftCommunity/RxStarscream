@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/GuyKahlon/RxStarscream/blob/master/SampleApp/Assets.xcassets/RxStarscreamIcon.imageset/RxStarscreamIcon.png" width="90" height="90"> 
+  <img src="https://github.com/GuyKahlon/RxStarscream/blob/master/SampleApp/Assets.xcassets/RxStarscreamIcon.imageset/RxStarscreamIcon.png" width="90" height="90">
 </p>
 
 RxStarscream
@@ -14,7 +14,7 @@ A lightweight extension to [Starscream](https://github.com/daltoniam/Starscream)
 
 ### CocoaPods
 
-RxStarscream is available through [CocoaPods](http://cocoapods.org/). 
+RxStarscream is available through [CocoaPods](http://cocoapods.org/).
 Add the following line to your `Podfile`:
 
 	pod 'RxStarscream'
@@ -22,6 +22,16 @@ Add the following line to your `Podfile`:
 Then run:
 
 	pod install
+
+### RxStarscream version vs Swift version.
+
+Below is a table that shows which version of RxStarscream you should use for
+your Swift version.
+
+| Swift | RxStarscream  | RxSwift       |
+| ----- | ------------- |---------------|
+| 4.X   |  \>= 0.8      |  \>= 4.0      |
+| 3.X   | 0.7           | 3.0.0 - 3.6.1 |
 
 ### Carthage
 
@@ -45,51 +55,51 @@ Once imported, you can open a connection to your WebSocket server.
 
 ```swift
 
-socket = WebSocket(url: NSURL(string: "ws://localhost:8080/")!)
+socket = WebSocket(url: URL(string: "ws://localhost:8080/")!)
 socket.connect()
 ```
 Now you can subscribe e.g to all of the websocket events:
 
 ```swift
-socket.rx.response.subscribeNext { (response: WebSocketEvent) in
+socket.rx.response.subscribe(onNext: { (response: WebSocketEvent) in
 	switch response {
-	case .Connected:
+	case .connected:
 		print("Connected")
-	case .Disconnected(let error):
+	case .disconnected(let error):
 		print("Disconnected with optional error : \(error)")
-	case .Message(let msg):
+	case .message(let msg):
 		print("Message : \(msg)")
-	case .Data(_):
+	case .data(_):
 		print("Data")
-	case .Pong:
+	case .pong:
 		print("Pong")
   	}
-}.addDisposableTo(disposeBag)
+}).disposed(by disposeBag)
 ```
 
 
 Or just to a connect event:
 
 ```swift
-socket.rx.connected.subscribeNext { (isConnected: Bool) in        
+socket.rx.connected.subscribe(onNext: { (isConnected: Bool) in        
 	print("Is connected : \(isConnected)")
-}.addDisposableTo(self.disposeBag)
+}).disposed(by disposeBag)
 ```
 
 Or just to a message event:
 
 ```swift
-socket.rx_text.subscribeNext { (message: String) in        
+socket.rx.text.subscribe(onNext: { (message: String) in        
 	print("Message : \(message)")
-}.addDisposableTo(self.disposeBag)
+}).disposed(by disposeBag)
 ```
-      
+
 
 ## Sample Project
 
-There's a sample project (you need to run `carthage update` for it to compile). 
+There's a sample project (you need to run `carthage update` for it to compile).
 
-Tne sample project use echo server - https://www.websocket.org/echo.html 
+The sample project uses echo server - https://www.websocket.org/echo.html
 
 Have fun!
 
@@ -104,5 +114,3 @@ Bug reports and pull requests are welcome.
 ## License
 
 RxStarscream is available under the MIT license. See the LICENSE file for more info.
-
-

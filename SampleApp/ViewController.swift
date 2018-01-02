@@ -39,7 +39,7 @@ class ViewController: UIViewController {
                 case .connected:
                     return "Connected\n"
                 case .disconnected(let error):
-                    return "Disconnected with optional error: \(error) \n "
+                    return "Disconnected with error: \(String(describing: error)) \n"
                 case .message(let msg):
                     return "RESPONSE (Message): \(msg) \n"
                 case .data(let data):
