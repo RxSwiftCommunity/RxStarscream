@@ -3,8 +3,6 @@
   <img src="https://github.com/GuyKahlon/RxStarscream/blob/master/SampleApp/Assets.xcassets/RxStarscreamIcon.imageset/RxStarscreamIcon.png" width="90" height="90">
 </p>
 
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59143b0b0db7560001871050&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/59143b0b0db7560001871050/build/latest?branch=master)
-=======
 RxStarscream
 =========================================================================================================================
 [![CircleCI](https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxStarscream/master.svg)](https://circleci.com/gh/RxSwiftCommunity/RxStarscream/tree/master)

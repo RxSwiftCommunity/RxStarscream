@@ -7,7 +7,6 @@ import RxSwift
 import RxCocoa
 import Starscream
 
-
 public enum WebSocketEvent {
     case connected
     case disconnected(Error?)
