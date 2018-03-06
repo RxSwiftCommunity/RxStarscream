@@ -126,7 +126,7 @@ extension Reactive where Base: WebSocket {
         }
     }
 
-    func write(ping: Data) -> Observable<Void> {
+    public func write(ping: Data) -> Observable<Void> {
         return Observable.create { sub in
             self.base.write(ping: ping) {
                 sub.onNext(())
@@ -137,7 +137,7 @@ extension Reactive where Base: WebSocket {
         }
     }
 
-    func write(string: String) -> Observable<Void> {
+    public func write(string: String) -> Observable<Void> {
         return Observable.create { sub in
             self.base.write(string: string) {
                 sub.onNext(())
