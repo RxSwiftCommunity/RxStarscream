@@ -14,3 +14,4 @@ test:
     - set -o pipefail
   override:
     - xcodebuild test -scheme RxStarscream -project RxStarscream.xcodeproj -sdk iphonesimulator -destination "name=iPhone X" | xcpretty -c
+    - xcodebuild test -scheme RxStarscream-macOS -project RxStarscream.xcodeproj -sdk macosx
