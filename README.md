@@ -74,7 +74,7 @@ socket.rx.response.subscribe(onNext: { (response: WebSocketEvent) in
 	case .pong:
 		print("Pong")
   	}
-}).disposed(by disposeBag)
+}).disposed(by: disposeBag)
 ```
 
 
@@ -83,7 +83,7 @@ Or just to a connect event:
 ```swift
 socket.rx.connected.subscribe(onNext: { (isConnected: Bool) in        
 	print("Is connected : \(isConnected)")
-}).disposed(by disposeBag)
+}).disposed(by: disposeBag)
 ```
 
 Or just to a message event:
@@ -91,7 +91,7 @@ Or just to a message event:
 ```swift
 socket.rx.text.subscribe(onNext: { (message: String) in        
 	print("Message : \(message)")
-}).disposed(by disposeBag)
+}).disposed(by: disposeBag)
 ```
 
 
