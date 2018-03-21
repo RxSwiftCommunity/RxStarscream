@@ -9,6 +9,7 @@ Pod::Spec.new do |spec|
   spec.source_files     = 'Source/*.swift'
   spec.requires_arc     = true
   spec.ios.deployment_target = '8.0'
+  spec.osx.deployment_target = '10.10'
   spec.dependency 'Starscream', '~> 3.0'
   spec.dependency 'RxSwift', '~> 4.0'
   spec.dependency 'RxCocoa', '~> 4.0'
