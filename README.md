@@ -28,10 +28,11 @@ Then run:
 Below is a table that shows which version of RxStarscream you should use for
 your Swift version.
 
-| Swift | RxStarscream  | RxSwift       |
-| ----- | ------------- |---------------|
-| 4.X   |  \>= 0.8      |  \>= 4.0      |
-| 3.X   | 0.7           | 3.0.0 - 3.6.1 |
+| Swift  | RxStarscream  | RxSwift       |
+| ------ | ------------- |---------------|
+| >= 4.2 |  \>= 0.10     |  \>= 4.3      |
+| < 4.2  |  \>= 0.8      |  \>= 4.0      |
+| 3.X    |  0.7          | 3.0.0 - 3.6.1 |
 
 ### Carthage
 
@@ -81,7 +82,7 @@ socket.rx.response.subscribe(onNext: { (response: WebSocketEvent) in
 Or just to a connect event:
 
 ```swift
-socket.rx.connected.subscribe(onNext: { (isConnected: Bool) in        
+socket.rx.connected.subscribe(onNext: { (isConnected: Bool) in
 	print("Is connected : \(isConnected)")
 }).disposed(by: disposeBag)
 ```
@@ -89,7 +90,7 @@ socket.rx.connected.subscribe(onNext: { (isConnected: Bool) in
 Or just to a message event:
 
 ```swift
-socket.rx.text.subscribe(onNext: { (message: String) in        
+socket.rx.text.subscribe(onNext: { (message: String) in
 	print("Message : \(message)")
 }).disposed(by: disposeBag)
 ```
