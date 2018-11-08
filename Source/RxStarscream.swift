@@ -15,22 +15,22 @@ public enum WebSocketEvent {
     case pong
 }
 
-public class RxWebSocketDelegateProxy: DelegateProxy<WebSocket, NSObjectProtocol>, DelegateProxyType, WebSocketDelegate, WebSocketPongDelegate {
+public class RxWebSocketDelegateProxy<Client: WebSocketClient>: DelegateProxy<Client, NSObjectProtocol>, DelegateProxyType, WebSocketDelegate, WebSocketPongDelegate {
 
     private weak var forwardDelegate: WebSocketDelegate?
     private weak var forwardPongDelegate: WebSocketPongDelegate?
 
     fileprivate let subject = PublishSubject<WebSocketEvent>()
 
-    required public init(websocket: WebSocket) {
+    required public init(websocket: Client) {
         super.init(parentObject: websocket, delegateProxy: RxWebSocketDelegateProxy.self)
     }
 
-    public static func currentDelegate(for object: WebSocket) -> NSObjectProtocol? {
+    public static func currentDelegate(for object: Client) -> NSObjectProtocol? {
         return object.delegate as? NSObjectProtocol
     }
 
-    public static func setCurrentDelegate(_ delegate: NSObjectProtocol?, to object: WebSocket) {
+    public static func setCurrentDelegate(_ delegate: NSObjectProtocol?, to object: Client) {
         object.delegate = delegate as? WebSocketDelegate
         object.pongDelegate = delegate as? WebSocketPongDelegate
     }
@@ -69,7 +69,7 @@ public class RxWebSocketDelegateProxy: DelegateProxy<WebSocket, NSObjectProtocol
     }
 }
 
-extension Reactive where Base: WebSocket {
+extension Reactive where Base: WebSocketClient {
 
     public var response: Observable<WebSocketEvent> {
         return RxWebSocketDelegateProxy.proxy(for: base).subject
