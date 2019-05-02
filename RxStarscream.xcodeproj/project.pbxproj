@@ -76,11 +76,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				98655E37204F88A800524A64 /* RxCocoa.framework in CopyFiles */,
 				98655E3C204F892000524A64 /* RxStarscream_macOS.framework in CopyFiles */,
+				98655E35204F885800524A64 /* RxSwift.framework in CopyFiles */,
 				98655E3B204F88D600524A64 /* RxTest.framework in CopyFiles */,
 				98655E39204F88BD00524A64 /* Starscream.framework in CopyFiles */,
-				98655E37204F88A800524A64 /* RxCocoa.framework in CopyFiles */,
-				98655E35204F885800524A64 /* RxSwift.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,10 +90,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DF3045271FF31E5E009A779B /* RxStarscream.framework in CopyFiles */,
-				BEF3145B1E875DAA00C15DD4 /* RxTest.framework in CopyFiles */,
 				BEF314571E875D8500C15DD4 /* RxCocoa.framework in CopyFiles */,
+				DF3045271FF31E5E009A779B /* RxStarscream.framework in CopyFiles */,
 				BEF314581E875D8500C15DD4 /* RxSwift.framework in CopyFiles */,
+				BEF3145B1E875DAA00C15DD4 /* RxTest.framework in CopyFiles */,
 				BEF314591E875D8500C15DD4 /* Starscream.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,8 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98D95A5F204F7FC300159C45 /* RxCocoa.framework in Frameworks */,
-				98D95A5D204F7EF800159C45 /* Starscream.framework in Frameworks */,
 				98D95A59204F7EDF00159C45 /* RxSwift.framework in Frameworks */,
+				98D95A5D204F7EF800159C45 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,11 +165,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D95A67204F85D000159C45 /* Starscream.framework in Frameworks */,
-				98D95A65204F83AE00159C45 /* RxTest.framework in Frameworks */,
-				98D95A63204F83A400159C45 /* RxSwift.framework in Frameworks */,
 				98D95A62204F839A00159C45 /* RxCocoa.framework in Frameworks */,
 				98D95A48204F7E9B00159C45 /* RxStarscream_macOS.framework in Frameworks */,
+				98D95A63204F83A400159C45 /* RxSwift.framework in Frameworks */,
+				98D95A65204F83AE00159C45 /* RxTest.framework in Frameworks */,
+				98D95A67204F85D000159C45 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,10 +177,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */,
 				BEF314521E86DB5700C15DD4 /* RxSwift.framework in Frameworks */,
 				BEF314541E86DB5700C15DD4 /* RxTest.framework in Frameworks */,
 				BEF314551E86DB5700C15DD4 /* Starscream.framework in Frameworks */,
-				BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +188,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */,
 				E42144ED1CFF3AC600885498 /* RxSwift.framework in Frameworks */,
 				E42144EE1CFF3AC900885498 /* Starscream.framework in Frameworks */,
-				0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +210,8 @@
 		98D95A40204F7E9A00159C45 /* RxStarscream-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */,
 				98D95A42204F7E9B00159C45 /* Info.plist */,
+				98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */,
 			);
 			path = "RxStarscream-macOS";
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 		98D95A4B204F7E9B00159C45 /* RxStarscream-macOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				98D95A4C204F7E9B00159C45 /* RxStarscream_macOSTests.swift */,
 				98D95A4E204F7E9B00159C45 /* Info.plist */,
+				98D95A4C204F7E9B00159C45 /* RxStarscream_macOSTests.swift */,
 			);
 			path = "RxStarscream-macOSTests";
 			sourceTree = "<group>";
@@ -228,8 +228,8 @@
 		BEF314411E86D13C00C15DD4 /* RxStarscreamTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */,
 				BEF314441E86D13C00C15DD4 /* Info.plist */,
+				BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */,
 			);
 			path = RxStarscreamTests;
 			sourceTree = "<group>";
@@ -237,13 +237,13 @@
 		BEF3144B1E86DAF900C15DD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				98D95A64204F83AE00159C45 /* RxTest.framework */,
-				98D95A5C204F7EF800159C45 /* Starscream.framework */,
+				BEF3144E1E86DB0700C15DD4 /* iOS */,
 				98D95A5A204F7EEE00159C45 /* RxCocoa.framework */,
 				98D95A58204F7EDE00159C45 /* RxSwift.framework */,
 				BEF314501E86DB1B00C15DD4 /* RxSwiftExt.framework */,
-				BEF3144E1E86DB0700C15DD4 /* iOS */,
+				98D95A64204F83AE00159C45 /* RxTest.framework */,
 				BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */,
+				98D95A5C204F7EF800159C45 /* Starscream.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,11 +262,11 @@
 			isa = PBXGroup;
 			children = (
 				E42144DC1CFF385E00885498 /* AppDelegate.swift */,
-				E42144DE1CFF385E00885498 /* ViewController.swift */,
-				E42144E01CFF385E00885498 /* Main.storyboard */,
 				E42144E31CFF385E00885498 /* Assets.xcassets */,
-				E42144E51CFF385E00885498 /* LaunchScreen.storyboard */,
 				E42144E81CFF385E00885498 /* Info.plist */,
+				E42144E51CFF385E00885498 /* LaunchScreen.storyboard */,
+				E42144E01CFF385E00885498 /* Main.storyboard */,
+				E42144DE1CFF385E00885498 /* ViewController.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -292,11 +292,11 @@
 		E46D00271CFF22200054DF1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E46D00261CFF22200054DF1F /* RxStarscream.framework */,
-				E42144DA1CFF385E00885498 /* SampleApp.app */,
-				BEF314401E86D13C00C15DD4 /* RxStarscreamTests.xctest */,
-				98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */,
 				98D95A47204F7E9B00159C45 /* RxStarscream-macOSTests.xctest */,
+				E46D00261CFF22200054DF1F /* RxStarscream.framework */,
+				98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */,
+				BEF314401E86D13C00C15DD4 /* RxStarscreamTests.xctest */,
+				E42144DA1CFF385E00885498 /* SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,9 +304,9 @@
 		E46D00281CFF22200054DF1F /* RxStarscream */ = {
 			isa = PBXGroup;
 			children = (
-				E46D00311CFF22760054DF1F /* RxStarscream.swift */,
-				E46D00291CFF22200054DF1F /* RxStarscream.h */,
 				E46D002B1CFF22200054DF1F /* Info.plist */,
+				E46D00291CFF22200054DF1F /* RxStarscream.h */,
+				E46D00311CFF22760054DF1F /* RxStarscream.swift */,
 			);
 			path = RxStarscream;
 			sourceTree = "<group>";
@@ -468,6 +468,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -511,8 +512,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E42144E71CFF385E00885498 /* LaunchScreen.storyboard in Resources */,
 				E42144E41CFF385E00885498 /* Assets.xcassets in Resources */,
+				E42144E71CFF385E00885498 /* LaunchScreen.storyboard in Resources */,
 				E42144E21CFF385E00885498 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,9 +556,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42144DD1CFF385E00885498 /* AppDelegate.swift in Sources */,
 				E42144EC1CFF395500885498 /* RxStarscream.swift in Sources */,
 				E42144DF1CFF385E00885498 /* ViewController.swift in Sources */,
-				E42144DD1CFF385E00885498 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +634,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -665,7 +666,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -692,7 +693,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -718,7 +719,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwift.RxStarscream-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -739,7 +740,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -760,7 +761,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -781,7 +782,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -803,7 +804,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -947,7 +948,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -973,7 +974,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
