@@ -8,7 +8,7 @@ jobs:
       XCODE_TEST_REPORTS: /tmp/xcode-test-results
       LANG: en_US.UTF-8
     macos:
-      xcode: '10.0.0'
+      xcode: '10.2.1'
     steps:
       - checkout
       - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS $XCODE_TEST_REPORTS
@@ -17,7 +17,7 @@ jobs:
             - v1-dep-{{ .Branch }}-
             - v1-dep-master-
             - v1-dep-
-      - run: 
+      - run:
           name: Bootstrap Carthage
           command: scripts/bootstrap-if-needed.sh
       - save_cache:
@@ -25,17 +25,11 @@ jobs:
           paths:
             - Carthage
       - run:
-          name: iOS, Swift 4
-          command: set -o pipefail && xcodebuild test SWIFT_VERSION=4.0 -scheme RxStarscream -project RxStarscream.xcodeproj -sdk iphonesimulator -destination "name=iPhone 8" |  xcpretty -c -r html --output $XCODE_TEST_REPORTS/iOS_swift4.html
+          name: iOS, Swift 5
+          command: set -o pipefail && xcodebuild test SWIFT_VERSION=5.0 -scheme RxStarscream -project RxStarscream.xcodeproj -sdk iphonesimulator -destination "name=iPhone 8" |  xcpretty -c -r html --output $XCODE_TEST_REPORTS/iOS_swift5.html
       - run:
-          name: iOS, Swift 4.2
-          command: set -o pipefail && xcodebuild test SWIFT_VERSION=4.2 -scheme RxStarscream -project RxStarscream.xcodeproj -sdk iphonesimulator -destination "name=iPhone 8" | xcpretty -c -r html --output $XCODE_TEST_REPORTS/iOS_swift4_2.html
-      - run:
-          name: macOS, Swift 4
-          command: set -o pipefail && xcodebuild test SWIFT_VERSION=4.0 -scheme RxStarscream-macOS -project RxStarscream.xcodeproj -sdk macosx | xcpretty -c -r html --output $XCODE_TEST_REPORTS/macOS_swift4.html
-      - run:
-          name: macOS, Swift 4.2
-          command: set -o pipefail && xcodebuild test SWIFT_VERSION=4.2 -scheme RxStarscream-macOS -project RxStarscream.xcodeproj -sdk macosx | xcpretty -c -r html --output $XCODE_TEST_REPORTS/macOS_swift4_2.html
+          name: macOS, Swift 5
+          command: set -o pipefail && xcodebuild test SWIFT_VERSION=5.0 -scheme RxStarscream-macOS -project RxStarscream.xcodeproj -sdk macosx | xcpretty -c -r html --output $XCODE_TEST_REPORTS/macOS_swift5.html
       - store_artifacts:
           path: $XCODE_TEST_REPORTS
   "RxStarscream Release":
@@ -45,7 +39,7 @@ jobs:
     environment:
       LANG: en_US.UTF-8
     macos:
-      xcode: '10.0.0'
+      xcode: '10.2.1'
     steps:
       - checkout
       - run:
@@ -56,7 +50,7 @@ jobs:
           command: rm ~/.cocoapods/config.yaml # This hack is needed since CircleCI forces --verbose
       - run:
           name: Push Podspec to Trunk
-          command: pod trunk push --skip-tests --allow-warnings --swift-version=4.0
+          command: pod trunk push --skip-tests --allow-warnings --swift-version=5.0
 workflows:
   version: 2
   build:
