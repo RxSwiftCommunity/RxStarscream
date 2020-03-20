@@ -10,10 +10,6 @@
 		0B4DAAC71E0497BC00ECDBF9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; };
 		0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; };
 		0B4DAAC91E04980000ECDBF9 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98655E35204F885800524A64 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98655E34204F885800524A64 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98655E37204F88A800524A64 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98655E36204F88A800524A64 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98655E39204F88BD00524A64 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98655E38204F88BD00524A64 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98655E3B204F88D600524A64 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98655E3A204F88D600524A64 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98655E3C204F892000524A64 /* RxStarscream_macOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98D95A48204F7E9B00159C45 /* RxStarscream_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */; };
 		98D95A56204F7EB400159C45 /* RxStarscream_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +46,18 @@
 		E42144EE1CFF3AC900885498 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
 		E46D002A1CFF22200054DF1F /* RxStarscream.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D00291CFF22200054DF1F /* RxStarscream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E46D00321CFF22760054DF1F /* RxStarscream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46D00311CFF22760054DF1F /* RxStarscream.swift */; };
+		EE32F632227B251800F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; };
+		EE32F633227B253200F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; };
+		EE32F639227B257600F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F638227B257600F27FFA /* RxRelay.framework */; };
+		EE32F63A227B258500F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F638227B257600F27FFA /* RxRelay.framework */; };
+		EE32F640227B28A500F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; };
+		EE32F641227B28E700F27FFA /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE32F642227B292400F27FFA /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE32F643227B296300F27FFA /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A5A204F7EEE00159C45 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE32F644227B296300F27FFA /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE32F638227B257600F27FFA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE32F645227B296300F27FFA /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A58204F7EDE00159C45 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE32F646227B296300F27FFA /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A64204F83AE00159C45 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE32F647227B296300F27FFA /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A5C204F7EF800159C45 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,11 +84,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EE32F643227B296300F27FFA /* RxCocoa.framework in CopyFiles */,
+				EE32F644227B296300F27FFA /* RxRelay.framework in CopyFiles */,
 				98655E3C204F892000524A64 /* RxStarscream_macOS.framework in CopyFiles */,
-				98655E3B204F88D600524A64 /* RxTest.framework in CopyFiles */,
-				98655E39204F88BD00524A64 /* Starscream.framework in CopyFiles */,
-				98655E37204F88A800524A64 /* RxCocoa.framework in CopyFiles */,
-				98655E35204F885800524A64 /* RxSwift.framework in CopyFiles */,
+				EE32F645227B296300F27FFA /* RxSwift.framework in CopyFiles */,
+				EE32F646227B296300F27FFA /* RxTest.framework in CopyFiles */,
+				EE32F647227B296300F27FFA /* Starscream.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,10 +99,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DF3045271FF31E5E009A779B /* RxStarscream.framework in CopyFiles */,
-				BEF3145B1E875DAA00C15DD4 /* RxTest.framework in CopyFiles */,
 				BEF314571E875D8500C15DD4 /* RxCocoa.framework in CopyFiles */,
+				EE32F641227B28E700F27FFA /* RxRelay.framework in CopyFiles */,
+				DF3045271FF31E5E009A779B /* RxStarscream.framework in CopyFiles */,
 				BEF314581E875D8500C15DD4 /* RxSwift.framework in CopyFiles */,
+				BEF3145B1E875DAA00C15DD4 /* RxTest.framework in CopyFiles */,
 				BEF314591E875D8500C15DD4 /* Starscream.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +115,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0B4DAAC91E04980000ECDBF9 /* RxCocoa.framework in Embed Frameworks */,
+				EE32F642227B292400F27FFA /* RxRelay.framework in Embed Frameworks */,
 				E402203A1CFF3C6900C5A874 /* RxSwift.framework in Embed Frameworks */,
 				E402203C1CFF3C6900C5A874 /* Starscream.framework in Embed Frameworks */,
 			);
@@ -115,10 +126,6 @@
 
 /* Begin PBXFileReference section */
 		0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		98655E34204F885800524A64 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
-		98655E36204F88A800524A64 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
-		98655E38204F88BD00524A64 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
-		98655E3A204F88D600524A64 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
 		98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxStarscream_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxStarscream_macOS.h; sourceTree = "<group>"; };
 		98D95A42204F7E9B00159C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,7 +141,6 @@
 		BEF314441E86D13C00C15DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		BEF3144E1E86DB0700C15DD4 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = Carthage/Build/iOS; sourceTree = "<group>"; };
-		BEF314501E86DB1B00C15DD4 /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
 		E42144A21CFF275E00885498 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		E42144A31CFF275E00885498 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		E42144DA1CFF385E00885498 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +154,8 @@
 		E46D00291CFF22200054DF1F /* RxStarscream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxStarscream.h; sourceTree = "<group>"; };
 		E46D002B1CFF22200054DF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E46D00311CFF22760054DF1F /* RxStarscream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxStarscream.swift; path = Source/RxStarscream.swift; sourceTree = SOURCE_ROOT; };
+		EE32F631227B251800F27FFA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		EE32F638227B257600F27FFA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/Mac/RxRelay.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				98D95A5F204F7FC300159C45 /* RxCocoa.framework in Frameworks */,
-				98D95A5D204F7EF800159C45 /* Starscream.framework in Frameworks */,
+				EE32F639227B257600F27FFA /* RxRelay.framework in Frameworks */,
 				98D95A59204F7EDF00159C45 /* RxSwift.framework in Frameworks */,
+				98D95A5D204F7EF800159C45 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,11 +174,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D95A67204F85D000159C45 /* Starscream.framework in Frameworks */,
-				98D95A65204F83AE00159C45 /* RxTest.framework in Frameworks */,
-				98D95A63204F83A400159C45 /* RxSwift.framework in Frameworks */,
 				98D95A62204F839A00159C45 /* RxCocoa.framework in Frameworks */,
+				EE32F63A227B258500F27FFA /* RxRelay.framework in Frameworks */,
 				98D95A48204F7E9B00159C45 /* RxStarscream_macOS.framework in Frameworks */,
+				98D95A63204F83A400159C45 /* RxSwift.framework in Frameworks */,
+				98D95A65204F83AE00159C45 /* RxTest.framework in Frameworks */,
+				98D95A67204F85D000159C45 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,10 +187,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE32F640227B28A500F27FFA /* RxRelay.framework in Frameworks */,
+				BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */,
 				BEF314521E86DB5700C15DD4 /* RxSwift.framework in Frameworks */,
 				BEF314541E86DB5700C15DD4 /* RxTest.framework in Frameworks */,
 				BEF314551E86DB5700C15DD4 /* Starscream.framework in Frameworks */,
-				BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +199,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */,
+				EE32F633227B253200F27FFA /* RxRelay.framework in Frameworks */,
 				E42144ED1CFF3AC600885498 /* RxSwift.framework in Frameworks */,
 				E42144EE1CFF3AC900885498 /* Starscream.framework in Frameworks */,
-				0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4DAAC71E0497BC00ECDBF9 /* RxCocoa.framework in Frameworks */,
+				EE32F632227B251800F27FFA /* RxRelay.framework in Frameworks */,
 				E42144A41CFF275E00885498 /* RxSwift.framework in Frameworks */,
 				E42144A51CFF275E00885498 /* Starscream.framework in Frameworks */,
 			);
@@ -210,8 +223,8 @@
 		98D95A40204F7E9A00159C45 /* RxStarscream-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */,
 				98D95A42204F7E9B00159C45 /* Info.plist */,
+				98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */,
 			);
 			path = "RxStarscream-macOS";
 			sourceTree = "<group>";
@@ -219,8 +232,8 @@
 		98D95A4B204F7E9B00159C45 /* RxStarscream-macOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				98D95A4C204F7E9B00159C45 /* RxStarscream_macOSTests.swift */,
 				98D95A4E204F7E9B00159C45 /* Info.plist */,
+				98D95A4C204F7E9B00159C45 /* RxStarscream_macOSTests.swift */,
 			);
 			path = "RxStarscream-macOSTests";
 			sourceTree = "<group>";
@@ -228,8 +241,8 @@
 		BEF314411E86D13C00C15DD4 /* RxStarscreamTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */,
 				BEF314441E86D13C00C15DD4 /* Info.plist */,
+				BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */,
 			);
 			path = RxStarscreamTests;
 			sourceTree = "<group>";
@@ -237,13 +250,12 @@
 		BEF3144B1E86DAF900C15DD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEF3144E1E86DB0700C15DD4 /* iOS */,
+				98D95A5A204F7EEE00159C45 /* RxCocoa.framework */,
+				EE32F638227B257600F27FFA /* RxRelay.framework */,
+				98D95A58204F7EDE00159C45 /* RxSwift.framework */,
 				98D95A64204F83AE00159C45 /* RxTest.framework */,
 				98D95A5C204F7EF800159C45 /* Starscream.framework */,
-				98D95A5A204F7EEE00159C45 /* RxCocoa.framework */,
-				98D95A58204F7EDE00159C45 /* RxSwift.framework */,
-				BEF314501E86DB1B00C15DD4 /* RxSwiftExt.framework */,
-				BEF3144E1E86DB0700C15DD4 /* iOS */,
-				BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,7 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */,
+				EE32F631227B251800F27FFA /* RxRelay.framework */,
 				E42144A21CFF275E00885498 /* RxSwift.framework */,
+				BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */,
 				E42144A31CFF275E00885498 /* Starscream.framework */,
 			);
 			name = "Dependency Frameworks";
@@ -262,11 +276,11 @@
 			isa = PBXGroup;
 			children = (
 				E42144DC1CFF385E00885498 /* AppDelegate.swift */,
-				E42144DE1CFF385E00885498 /* ViewController.swift */,
-				E42144E01CFF385E00885498 /* Main.storyboard */,
 				E42144E31CFF385E00885498 /* Assets.xcassets */,
-				E42144E51CFF385E00885498 /* LaunchScreen.storyboard */,
 				E42144E81CFF385E00885498 /* Info.plist */,
+				E42144E51CFF385E00885498 /* LaunchScreen.storyboard */,
+				E42144E01CFF385E00885498 /* Main.storyboard */,
+				E42144DE1CFF385E00885498 /* ViewController.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -274,10 +288,6 @@
 		E46D001C1CFF22200054DF1F = {
 			isa = PBXGroup;
 			children = (
-				98655E3A204F88D600524A64 /* RxTest.framework */,
-				98655E38204F88BD00524A64 /* Starscream.framework */,
-				98655E36204F88A800524A64 /* RxCocoa.framework */,
-				98655E34204F885800524A64 /* RxSwift.framework */,
 				E46D00281CFF22200054DF1F /* RxStarscream */,
 				E42144DB1CFF385E00885498 /* SampleApp */,
 				BEF314411E86D13C00C15DD4 /* RxStarscreamTests */,
@@ -292,11 +302,11 @@
 		E46D00271CFF22200054DF1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E46D00261CFF22200054DF1F /* RxStarscream.framework */,
-				E42144DA1CFF385E00885498 /* SampleApp.app */,
-				BEF314401E86D13C00C15DD4 /* RxStarscreamTests.xctest */,
-				98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */,
 				98D95A47204F7E9B00159C45 /* RxStarscream-macOSTests.xctest */,
+				E46D00261CFF22200054DF1F /* RxStarscream.framework */,
+				98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */,
+				BEF314401E86D13C00C15DD4 /* RxStarscreamTests.xctest */,
+				E42144DA1CFF385E00885498 /* SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,9 +314,9 @@
 		E46D00281CFF22200054DF1F /* RxStarscream */ = {
 			isa = PBXGroup;
 			children = (
-				E46D00311CFF22760054DF1F /* RxStarscream.swift */,
-				E46D00291CFF22200054DF1F /* RxStarscream.h */,
 				E46D002B1CFF22200054DF1F /* Info.plist */,
+				E46D00291CFF22200054DF1F /* RxStarscream.h */,
+				E46D00311CFF22760054DF1F /* RxStarscream.swift */,
 			);
 			path = RxStarscream;
 			sourceTree = "<group>";
@@ -468,6 +478,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -511,8 +522,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E42144E71CFF385E00885498 /* LaunchScreen.storyboard in Resources */,
 				E42144E41CFF385E00885498 /* Assets.xcassets in Resources */,
+				E42144E71CFF385E00885498 /* LaunchScreen.storyboard in Resources */,
 				E42144E21CFF385E00885498 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,9 +566,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42144DD1CFF385E00885498 /* AppDelegate.swift in Sources */,
 				E42144EC1CFF395500885498 /* RxStarscream.swift in Sources */,
 				E42144DF1CFF385E00885498 /* ViewController.swift in Sources */,
-				E42144DD1CFF385E00885498 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +644,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -665,7 +676,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -692,7 +703,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -718,7 +729,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwift.RxStarscream-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -739,7 +750,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -760,7 +771,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -781,7 +792,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -803,7 +814,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -947,7 +958,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -973,7 +984,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
