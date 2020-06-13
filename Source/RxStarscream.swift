@@ -11,7 +11,8 @@ extension WebSocket: HasDelegate {
     public typealias Delegate = WebSocketDelegate
 }
 
-class RxWebSocketDelegateProxy:DelegateProxy<WebSocket, WebSocketDelegate>, DelegateProxyType, WebSocketDelegate {
+public class RxWebSocketDelegateProxy:DelegateProxy<WebSocket, WebSocketDelegate>,
+    DelegateProxyType, WebSocketDelegate {
     
     public weak private(set) var webSocket: WebSocket?
     fileprivate let subject = PublishSubject<WebSocketEvent>()
@@ -26,16 +27,16 @@ class RxWebSocketDelegateProxy:DelegateProxy<WebSocket, WebSocketDelegate>, Dele
         self.register { RxWebSocketDelegateProxy(webSocket: $0) }
     }
     
-    static func currentDelegate(for object: WebSocket) -> WebSocketDelegate? {
+    public static func currentDelegate(for object: WebSocket) -> WebSocketDelegate? {
         return object.delegate
     }
     
-    static func setCurrentDelegate(_ delegate: WebSocketDelegate?, to object: WebSocket) {
+    public static func setCurrentDelegate(_ delegate: WebSocketDelegate?, to object: WebSocket) {
         object.delegate = delegate
     }
     
     
-    func didReceive(event: WebSocketEvent, client: WebSocket) {
+    public func didReceive(event: WebSocketEvent, client: WebSocket) {
         subject.onNext(event)
     }
     
@@ -123,3 +124,5 @@ extension Reactive where Base: WebSocket {
         }
     }
 }
+
+extension WebSocket:ReactiveCompatible {}
