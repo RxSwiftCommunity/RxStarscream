@@ -68,7 +68,7 @@ socket.rx.response.subscribe(onNext: { (response: WebSocketEvent) in
 		print("Connected")
 	case .disconnected(let error):
 		print("Disconnected with optional error : \(error)")
-	case .message(let msg):
+	case .text(let msg):
 		print("Message : \(msg)")
 	case .data(_):
 		print("Data")
