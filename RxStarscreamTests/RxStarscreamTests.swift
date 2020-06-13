@@ -20,7 +20,7 @@ public func ==(lhs: WebSocketEvent, rhs: WebSocketEvent) -> Bool {
         return true
     case (.disconnected(let lhsError), .disconnected(let rhsError)):
         return lhsError?.localizedDescription == rhsError?.localizedDescription
-    case (.message(let lhsMsg), .message(let rhsMsg)):
+    case (.text(let lhsMsg), .text(let rhsMsg)):
         return lhsMsg == rhsMsg
     case (.data(let lhsData), .data(let rhsData)):
         return lhsData == rhsData
@@ -101,6 +101,6 @@ class RxStarscreamTests: XCTestCase {
         socket.delegate!.websocketDidReceiveMessage(socket: socket, text: sentMessage)
         
         XCTAssertEqual(self.responseObserver.events.count, 1)
-        XCTAssertEqual(WebSocketEvent.message(sentMessage), self.responseObserver.events[0].value.element!)
+        XCTAssertEqual(WebSocketEvent.text(sentMessage), self.responseObserver.events[0].value.element!)
     }
 }

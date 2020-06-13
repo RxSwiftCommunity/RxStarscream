@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc     = true
   spec.ios.deployment_target = '8.0'
   spec.osx.deployment_target = '10.10'
-  spec.dependency 'Starscream', '~> 3'
+  spec.dependency 'Starscream', '~> 4'
   spec.dependency 'RxSwift', '~> 5'
   spec.dependency 'RxCocoa', '~> 5'
   spec.license      = { :type => 'Apache License, Version 2.0', :text => <<-LICENSE
