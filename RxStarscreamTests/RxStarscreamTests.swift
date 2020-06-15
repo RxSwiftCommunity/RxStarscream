@@ -43,7 +43,7 @@ class RxStarscreamTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        socket = WebSocket(url: URL(string: "wss://echo.websocket.org")!)
+        socket = WebSocket(URLRequest(url: URL(string: "wss://echo.websocket.org")!))
         continueAfterFailure = false
     }
 
