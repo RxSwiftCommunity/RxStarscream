@@ -1,2 +1,2 @@
-github "ReactiveX/RxSwift" "5.0.1"
-github "daltoniam/Starscream" "3.1.0"
+github "ReactiveX/RxSwift" "5.1.1"
+github "daltoniam/Starscream" "4.0.3"
