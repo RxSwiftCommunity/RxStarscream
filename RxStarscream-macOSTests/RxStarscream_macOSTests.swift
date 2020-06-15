@@ -18,11 +18,11 @@ public func ==(lhs: WebSocketEvent, rhs: WebSocketEvent) -> Bool {
     switch (lhs, rhs) {
     case (.connected, .connected):
         return true
-    case (.disconnected(let lhsError), .disconnected(let rhsError)):
-        return lhsError?.localizedDescription == rhsError?.localizedDescription
-    case (.message(let lhsMsg), .message(let rhsMsg)):
+    case (.disconnected(let lhsMsg, _), .disconnected(let rhsMsg, _)):
         return lhsMsg == rhsMsg
-    case (.data(let lhsData), .data(let rhsData)):
+    case (.text(let lhsMsg), .text(let rhsMsg)):
+        return lhsMsg == rhsMsg
+    case (.binary(let lhsData), .binary(let rhsData)):
         return lhsData == rhsData
     case (.pong, .pong):
         return true
@@ -43,7 +43,7 @@ class RxStarscreamTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        socket = WebSocket(url: URL(string: "wss://echo.websocket.org")!)
+        socket = WebSocket(request: URLRequest(url: URL(string: "wss://echo.websocket.org")!))
         continueAfterFailure = false
     }
 
@@ -62,8 +62,8 @@ class RxStarscreamTests: XCTestCase {
 
         XCTAssertTrue(socket.delegate != nil, "delegate should be set")
 
-        socket.delegate!.websocketDidConnect(socket: socket)
-        socket.delegate!.websocketDidDisconnect(socket: socket, error: nil)
+        socket.delegate!.didReceive(event: .connected([:]), client: socket)
+        socket.delegate!.didReceive(event: .disconnected("", 0), client: socket)
 
         XCTAssertEqual(self.connectedObserver.events.count, 2)
         XCTAssertEqual(self.connectedObserver.events[0].value.element!, true)
@@ -78,12 +78,10 @@ class RxStarscreamTests: XCTestCase {
             .subscribe(pongObserver)
             .disposed(by: disposeBag)
 
-        XCTAssertTrue(socket.pongDelegate != nil, "pongDelegate should be set")
-
-        socket.pongDelegate!.websocketDidReceivePong(socket: socket, data: Data())
+        socket.delegate?.didReceive(event: .pong(Data()), client: socket)
 
         XCTAssertEqual(self.pongObserver.events.count, 1)
-        XCTAssertEqual(self.pongObserver.events[0].value.element!, WebSocketEvent.pong)
+        XCTAssertEqual(self.pongObserver.events[0].value.element!, WebSocketEvent.pong(Data()))
     }
 
     func testMessageResponse() {
@@ -98,10 +96,10 @@ class RxStarscreamTests: XCTestCase {
 
         XCTAssertTrue(socket.delegate != nil, "delegate should be set")
 
-        socket.delegate!.websocketDidReceiveMessage(socket: socket, text: sentMessage)
-
+        socket.delegate!.didReceive(event: .text(sentMessage), client: socket)
+        
         XCTAssertEqual(self.responseObserver.events.count, 1)
-        XCTAssertEqual(WebSocketEvent.message(sentMessage), self.responseObserver.events[0].value.element!)
+        XCTAssertEqual(WebSocketEvent.text(sentMessage), self.responseObserver.events[0].value.element!)
     }
 }
 
