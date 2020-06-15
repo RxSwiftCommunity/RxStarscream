@@ -1,0 +1,21 @@
+name: Swift
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Bootstrap Carthage
+      run: sh scripts/bootstrap.sh
+      
+    - name: iOS Test
+      run: set -o pipefail && xcodebuild test -scheme RxStarscream -project RxStarscream.xcodeproj -sdk iphonesimulator -destination "name=iPhone 8" |  xcpretty
+    
+    - name: MacOS Test
+      run:  set -o pipefail && xcodebuild test SWIFT_VERSION=5.0 -scheme RxStarscream-macOS -project RxStarscream.xcodeproj -sdk macosx | xcpretty 
+ 
