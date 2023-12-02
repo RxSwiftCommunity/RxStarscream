@@ -7,61 +7,32 @@ import RxSwift
 import RxCocoa
 import Starscream
 
-public enum WebSocketEvent {
-    case connected
-    case disconnected(Error?)
-    case message(String)
-    case data(Data)
-    case pong
+extension WebSocket: HasDelegate {
+    public typealias Delegate = WebSocketDelegate
 }
 
-public class RxWebSocketDelegateProxy<Client: WebSocketClient>: DelegateProxy<Client, NSObjectProtocol>, DelegateProxyType, WebSocketDelegate, WebSocketPongDelegate {
-
-    private weak var forwardDelegate: WebSocketDelegate?
-    private weak var forwardPongDelegate: WebSocketPongDelegate?
+public class RxWebSocketDelegateProxy: DelegateProxy<WebSocket, WebSocketDelegate>, DelegateProxyType, WebSocketDelegate {
 
     fileprivate let subject = PublishSubject<WebSocketEvent>()
 
-    required public init(websocket: Client) {
+    required public init(websocket: WebSocket) {
         super.init(parentObject: websocket, delegateProxy: RxWebSocketDelegateProxy.self)
     }
-
-    public static func currentDelegate(for object: Client) -> NSObjectProtocol? {
-        return object.delegate as? NSObjectProtocol
+    
+    public func didReceive(event: WebSocketEvent, client: WebSocketClient) {
+        subject.onNext(event)
     }
 
-    public static func setCurrentDelegate(_ delegate: NSObjectProtocol?, to object: Client) {
-        object.delegate = delegate as? WebSocketDelegate
-        object.pongDelegate = delegate as? WebSocketPongDelegate
+    public static func currentDelegate(for object: WebSocket) -> Starscream.WebSocketDelegate? {
+        object.delegate
+    }
+    
+    public static func setCurrentDelegate(_ delegate: WebSocketDelegate?, to object: Starscream.WebSocket) {
+        object.delegate = delegate
     }
 
     public static func registerKnownImplementations() {
         self.register { RxWebSocketDelegateProxy(websocket: $0) }
-    }
-
-    public func websocketDidConnect(socket: WebSocketClient) {
-        subject.onNext(WebSocketEvent.connected)
-        forwardDelegate?.websocketDidConnect(socket: socket)
-    }
-
-    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
-        subject.onNext(WebSocketEvent.disconnected(error))
-        forwardDelegate?.websocketDidDisconnect(socket: socket, error: error)
-    }
-
-    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-        subject.onNext(WebSocketEvent.message(text))
-        forwardDelegate?.websocketDidReceiveMessage(socket: socket, text: text)
-    }
-
-    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-        subject.onNext(WebSocketEvent.data(data))
-        forwardDelegate?.websocketDidReceiveData(socket: socket, data: data)
-    }
-
-    public func websocketDidReceivePong(socket: WebSocketClient, data: Data?) {
-        subject.onNext(WebSocketEvent.pong)
-        forwardPongDelegate?.websocketDidReceivePong(socket: socket, data: data)
     }
 
     deinit {
@@ -69,17 +40,19 @@ public class RxWebSocketDelegateProxy<Client: WebSocketClient>: DelegateProxy<Cl
     }
 }
 
-extension Reactive where Base: WebSocketClient {
+extension WebSocket: ReactiveCompatible {}
+
+extension Reactive where Base: WebSocket {
 
     public var response: Observable<WebSocketEvent> {
-        return RxWebSocketDelegateProxy.proxy(for: base).subject
+        RxWebSocketDelegateProxy.proxy(for: base).subject.asObservable()
     }
 
     public var text: Observable<String> {
-        return self.response
+        self.response
             .filter {
                 switch $0 {
-                case .message:
+                case .text(_):
                     return true
                 default:
                     return false
@@ -87,12 +60,12 @@ extension Reactive where Base: WebSocketClient {
             }
             .map {
                 switch $0 {
-                case .message(let message):
-                    return message
+                case .text(let text):
+                    return text
                 default:
-                    return String()
+                    return ""
                 }
-        }
+            }
     }
 
     public var connected: Observable<Bool> {
