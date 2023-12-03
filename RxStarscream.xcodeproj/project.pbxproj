@@ -24,6 +24,11 @@
 		A38CE3542B1B6F4A00AEAFB3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3532B1B6F4A00AEAFB3 /* RxSwift */; };
 		A38CE3562B1B6F8300AEAFB3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3552B1B6F8300AEAFB3 /* Starscream */; };
 		A38CE3582B1B704000AEAFB3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3572B1B704000AEAFB3 /* RxTest */; };
+		A38CE35A2B1CF8F200AEAFB3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3592B1CF8F200AEAFB3 /* RxBlocking */; };
+		A38CE35C2B1CF8F200AEAFB3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35B2B1CF8F200AEAFB3 /* RxCocoa */; };
+		A38CE35E2B1CF8F200AEAFB3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35D2B1CF8F200AEAFB3 /* RxRelay */; };
+		A38CE3602B1CF8F200AEAFB3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35F2B1CF8F200AEAFB3 /* RxSwift */; };
+		A38CE3622B1CF8F200AEAFB3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3612B1CF8F200AEAFB3 /* Starscream */; };
 		BEF314431E86D13C00C15DD4 /* RxStarscreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */; };
 		BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46D00261CFF22200054DF1F /* RxStarscream.framework */; };
 		DF3045271FF31E5E009A779B /* RxStarscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E46D00261CFF22200054DF1F /* RxStarscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -145,6 +150,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38CE35E2B1CF8F200AEAFB3 /* RxRelay in Frameworks */,
+				A38CE35C2B1CF8F200AEAFB3 /* RxCocoa in Frameworks */,
+				A38CE3602B1CF8F200AEAFB3 /* RxSwift in Frameworks */,
+				A38CE3622B1CF8F200AEAFB3 /* Starscream in Frameworks */,
+				A38CE35A2B1CF8F200AEAFB3 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +360,13 @@
 			dependencies = (
 			);
 			name = SampleApp;
+			packageProductDependencies = (
+				A38CE3592B1CF8F200AEAFB3 /* RxBlocking */,
+				A38CE35B2B1CF8F200AEAFB3 /* RxCocoa */,
+				A38CE35D2B1CF8F200AEAFB3 /* RxRelay */,
+				A38CE35F2B1CF8F200AEAFB3 /* RxSwift */,
+				A38CE3612B1CF8F200AEAFB3 /* Starscream */,
+			);
 			productName = SampleApp;
 			productReference = E42144DA1CFF385E00885498 /* SampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -1095,6 +1112,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
+		};
+		A38CE3592B1CF8F200AEAFB3 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		A38CE35B2B1CF8F200AEAFB3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A38CE35D2B1CF8F200AEAFB3 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		A38CE35F2B1CF8F200AEAFB3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		A38CE3612B1CF8F200AEAFB3 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
