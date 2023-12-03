@@ -36,6 +36,7 @@ class RxStarscreamTests: XCTestCase {
     private var connectedObserver: TestableObserver<Bool>!
     private var pongObserver: TestableObserver<WebSocketEvent>!
     private var responseObserver: TestableObserver<WebSocketEvent>!
+    private var binaryObserver: TestableObserver<WebSocketEvent>!
     private var socket: WebSocket!
 
     let disposeBag = DisposeBag()
@@ -71,6 +72,22 @@ class RxStarscreamTests: XCTestCase {
     }
     
     //TODO: Binary test case.
+    func testBinary() {
+        let scheuler = TestScheduler(initialClock: 0)
+        binaryObserver = scheuler.createObserver(WebSocketEvent.self)
+        
+        let binaryEvent = WebSocketEvent.binary(Data())
+        
+        socket.rx.response
+            .subscribe(binaryObserver)
+            .disposed(by: disposeBag)
+        
+        XCTAssertNotNil(socket.delegate)
+        
+        socket.delegate?.didReceive(event: binaryEvent, client: socket)
+        XCTAssertEqual(self.binaryObserver.events.count, 1)
+        XCTAssertEqual(self.binaryObserver.events[0].value.element!, binaryEvent)
+    }
 
     func testPongMessage() {
         let scheduler = TestScheduler(initialClock: 0)
