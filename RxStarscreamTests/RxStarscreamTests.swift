@@ -71,7 +71,6 @@ class RxStarscreamTests: XCTestCase {
         XCTAssertEqual(self.connectedObserver.events[1].value.element!, false)
     }
     
-    //TODO: Binary test case.
     func testBinary() {
         let scheuler = TestScheduler(initialClock: 0)
         binaryObserver = scheuler.createObserver(WebSocketEvent.self)
