@@ -8,9 +8,10 @@
 
 import XCTest
 import RxSwift
+import RxCocoa
 import RxTest
 import Starscream
-import RxStarscream_macOS
+import RxStarscream
 
 extension WebSocketEvent: Equatable { }
 
