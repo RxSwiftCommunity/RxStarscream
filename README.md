@@ -30,6 +30,7 @@ your Swift version.
 
 | Swift  | RxStarscream  | RxSwift       |
 | ------ | ------------- |---------------|
+| >= 5.0 |  \>= 0.11     |  \>= 6.6.0    |
 | >= 4.2 |  \>= 0.10     |  \>= 4.3      |
 | < 4.2  |  \>= 0.8      |  \>= 4.0      |
 | 3.X    |  0.7          | 3.0.0 - 3.6.1 |
@@ -43,6 +44,27 @@ Add this to your Cartfile
 Then run:
 
 	carthage update
+
+### Swift Package manager
+
+Create a `Package.swift`  file
+
+```
+let package = Package(
+        name: "SampleApp",
+
+        dependencies: [
+            .package(url: "https://github.com/RxSwiftCommunity/RxStarscream.git",
+                     from: "0.11.0"),
+        ],
+
+        targets: [
+            .target(
+                    name: "SampleApp",
+                    dependencies: ["RxStarscream"])
+        ]
+)
+```
 
 ## Usage examples
 
@@ -68,8 +90,8 @@ socket.rx.response.subscribe(onNext: { (response: WebSocketEvent) in
 		print("Connected")
 	case .disconnected(let error):
 		print("Disconnected with optional error : \(error)")
-	case .message(let msg):
-		print("Message : \(msg)")
+	case .text(let text):
+		print("Message : \(text)")
 	case .data(_):
 		print("Data")
 	case .pong:
@@ -98,7 +120,7 @@ socket.rx.text.subscribe(onNext: { (message: String) in
 
 ## Sample Project
 
-There's a sample project (you need to run `carthage update` for it to compile).
+There's a sample project with SPM.
 
 The sample project uses echo server - https://www.websocket.org/echo.html
 
