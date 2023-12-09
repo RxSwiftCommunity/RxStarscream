@@ -18,13 +18,6 @@ jobs:
             - v1-dep-master-
             - v1-dep-
       - run:
-          name: Bootstrap Carthage
-          command: scripts/bootstrap.sh
-      - save_cache:
-          key: v1-dep-{{ .Branch }}-{{ epoch }}
-          paths:
-            - Carthage
-      - run:
           name: iOS, Swift 5
           command: set -o pipefail && xcodebuild test SWIFT_VERSION=5.0 -scheme RxStarscream -project RxStarscream.xcodeproj -sdk iphonesimulator -destination "name=iPhone 8" |  xcpretty -c -r html --output $XCODE_TEST_REPORTS/iOS_swift5.html
       - run:
