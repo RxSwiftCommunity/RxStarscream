@@ -17,6 +17,7 @@
 		A311208C2B1ACE330027DA34 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A311208B2B1ACE330027DA34 /* RxRelay */; };
 		A311208E2B1ACE330027DA34 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A311208D2B1ACE330027DA34 /* RxSwift */; };
 		A31120932B1ACE410027DA34 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A31120922B1ACE410027DA34 /* Starscream */; };
+		A36A15202B22EFB600564C10 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */; };
 		A38CE34C2B1B6E6D00AEAFB3 /* RxTest-Dynamic in CopyFiles */ = {isa = PBXBuildFile; productRef = A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A38CE34E2B1B6EB400AEAFB3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34D2B1B6EB400AEAFB3 /* RxTest */; };
 		A38CE3502B1B6F4A00AEAFB3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34F2B1B6F4A00AEAFB3 /* RxCocoa */; };
@@ -141,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36A15202B22EFB600564C10 /* RxTest-Dynamic in Frameworks */,
 				A38CE34E2B1B6EB400AEAFB3 /* RxTest in Frameworks */,
 				BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */,
 			);
@@ -851,7 +853,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -906,7 +908,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
