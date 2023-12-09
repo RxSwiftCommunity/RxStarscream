@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxTest
 import Starscream
-import RxStarscream
+import RxStarscream_macOS
 
 extension WebSocketEvent: Equatable { }
 
