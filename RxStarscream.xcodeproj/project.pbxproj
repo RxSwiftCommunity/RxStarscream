@@ -3,61 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B4DAAC71E0497BC00ECDBF9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; };
-		0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; };
-		0B4DAAC91E04980000ECDBF9 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98655E3C204F892000524A64 /* RxStarscream_macOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98D95A48204F7E9B00159C45 /* RxStarscream_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */; };
 		98D95A56204F7EB400159C45 /* RxStarscream_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98D95A57204F7EC000159C45 /* RxStarscream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46D00311CFF22760054DF1F /* RxStarscream.swift */; };
-		98D95A59204F7EDF00159C45 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A58204F7EDE00159C45 /* RxSwift.framework */; };
-		98D95A5D204F7EF800159C45 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A5C204F7EF800159C45 /* Starscream.framework */; };
-		98D95A5F204F7FC300159C45 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A5A204F7EEE00159C45 /* RxCocoa.framework */; };
 		98D95A61204F82BA00159C45 /* RxStarscream_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D95A4C204F7E9B00159C45 /* RxStarscream_macOSTests.swift */; };
-		98D95A62204F839A00159C45 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A5A204F7EEE00159C45 /* RxCocoa.framework */; };
-		98D95A63204F83A400159C45 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A58204F7EDE00159C45 /* RxSwift.framework */; };
-		98D95A65204F83AE00159C45 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A64204F83AE00159C45 /* RxTest.framework */; };
-		98D95A67204F85D000159C45 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D95A5C204F7EF800159C45 /* Starscream.framework */; };
+		A31120882B1ACE330027DA34 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A31120872B1ACE330027DA34 /* RxBlocking */; };
+		A311208A2B1ACE330027DA34 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A31120892B1ACE330027DA34 /* RxCocoa */; };
+		A311208C2B1ACE330027DA34 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A311208B2B1ACE330027DA34 /* RxRelay */; };
+		A311208E2B1ACE330027DA34 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A311208D2B1ACE330027DA34 /* RxSwift */; };
+		A31120932B1ACE410027DA34 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A31120922B1ACE410027DA34 /* Starscream */; };
+		A36A15232B278D9C00564C10 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */; };
+		A36A15252B278DB400564C10 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A36A15242B278DB400564C10 /* RxTest-Dynamic */; };
+		A36A15262B278DB400564C10 /* RxTest-Dynamic in CopyFiles */ = {isa = PBXBuildFile; productRef = A36A15242B278DB400564C10 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A38CE34C2B1B6E6D00AEAFB3 /* RxTest-Dynamic in Copy Files */ = {isa = PBXBuildFile; productRef = A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A38CE3502B1B6F4A00AEAFB3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34F2B1B6F4A00AEAFB3 /* RxCocoa */; };
+		A38CE3522B1B6F4A00AEAFB3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3512B1B6F4A00AEAFB3 /* RxRelay */; };
+		A38CE3542B1B6F4A00AEAFB3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3532B1B6F4A00AEAFB3 /* RxSwift */; };
+		A38CE3562B1B6F8300AEAFB3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3552B1B6F8300AEAFB3 /* Starscream */; };
+		A38CE35A2B1CF8F200AEAFB3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3592B1CF8F200AEAFB3 /* RxBlocking */; };
+		A38CE35C2B1CF8F200AEAFB3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35B2B1CF8F200AEAFB3 /* RxCocoa */; };
+		A38CE35E2B1CF8F200AEAFB3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35D2B1CF8F200AEAFB3 /* RxRelay */; };
+		A38CE3602B1CF8F200AEAFB3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35F2B1CF8F200AEAFB3 /* RxSwift */; };
+		A38CE3622B1CF8F200AEAFB3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3612B1CF8F200AEAFB3 /* Starscream */; };
 		BEF314431E86D13C00C15DD4 /* RxStarscreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */; };
 		BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46D00261CFF22200054DF1F /* RxStarscream.framework */; };
-		BEF314521E86DB5700C15DD4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; };
-		BEF314541E86DB5700C15DD4 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */; };
-		BEF314551E86DB5700C15DD4 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
-		BEF314571E875D8500C15DD4 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEF314581E875D8500C15DD4 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEF314591E875D8500C15DD4 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEF3145B1E875DAA00C15DD4 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DF3045271FF31E5E009A779B /* RxStarscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E46D00261CFF22200054DF1F /* RxStarscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E402203A1CFF3C6900C5A874 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E402203C1CFF3C6900C5A874 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E42144A41CFF275E00885498 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; };
-		E42144A51CFF275E00885498 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
+		DF3045271FF31E5E009A779B /* RxStarscream.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = E46D00261CFF22200054DF1F /* RxStarscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E42144DD1CFF385E00885498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42144DC1CFF385E00885498 /* AppDelegate.swift */; };
 		E42144DF1CFF385E00885498 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42144DE1CFF385E00885498 /* ViewController.swift */; };
 		E42144E21CFF385E00885498 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42144E01CFF385E00885498 /* Main.storyboard */; };
 		E42144E41CFF385E00885498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42144E31CFF385E00885498 /* Assets.xcassets */; };
 		E42144E71CFF385E00885498 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42144E51CFF385E00885498 /* LaunchScreen.storyboard */; };
 		E42144EC1CFF395500885498 /* RxStarscream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46D00311CFF22760054DF1F /* RxStarscream.swift */; };
-		E42144ED1CFF3AC600885498 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A21CFF275E00885498 /* RxSwift.framework */; };
-		E42144EE1CFF3AC900885498 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42144A31CFF275E00885498 /* Starscream.framework */; };
 		E46D002A1CFF22200054DF1F /* RxStarscream.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D00291CFF22200054DF1F /* RxStarscream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E46D00321CFF22760054DF1F /* RxStarscream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46D00311CFF22760054DF1F /* RxStarscream.swift */; };
-		EE32F632227B251800F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; };
-		EE32F633227B253200F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; };
-		EE32F639227B257600F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F638227B257600F27FFA /* RxRelay.framework */; };
-		EE32F63A227B258500F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F638227B257600F27FFA /* RxRelay.framework */; };
-		EE32F640227B28A500F27FFA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; };
-		EE32F641227B28E700F27FFA /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE32F642227B292400F27FFA /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE32F631227B251800F27FFA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE32F643227B296300F27FFA /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A5A204F7EEE00159C45 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE32F644227B296300F27FFA /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE32F638227B257600F27FFA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE32F645227B296300F27FFA /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A58204F7EDE00159C45 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE32F646227B296300F27FFA /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A64204F83AE00159C45 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE32F647227B296300F27FFA /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98D95A5C204F7EF800159C45 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,28 +67,21 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE32F643227B296300F27FFA /* RxCocoa.framework in CopyFiles */,
-				EE32F644227B296300F27FFA /* RxRelay.framework in CopyFiles */,
+				A36A15262B278DB400564C10 /* RxTest-Dynamic in CopyFiles */,
 				98655E3C204F892000524A64 /* RxStarscream_macOS.framework in CopyFiles */,
-				EE32F645227B296300F27FFA /* RxSwift.framework in CopyFiles */,
-				EE32F646227B296300F27FFA /* RxTest.framework in CopyFiles */,
-				EE32F647227B296300F27FFA /* Starscream.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEF314561E875D5F00C15DD4 /* CopyFiles */ = {
+		BEF314561E875D5F00C15DD4 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BEF314571E875D8500C15DD4 /* RxCocoa.framework in CopyFiles */,
-				EE32F641227B28E700F27FFA /* RxRelay.framework in CopyFiles */,
-				DF3045271FF31E5E009A779B /* RxStarscream.framework in CopyFiles */,
-				BEF314581E875D8500C15DD4 /* RxSwift.framework in CopyFiles */,
-				BEF3145B1E875DAA00C15DD4 /* RxTest.framework in CopyFiles */,
-				BEF314591E875D8500C15DD4 /* Starscream.framework in CopyFiles */,
+				A38CE34C2B1B6E6D00AEAFB3 /* RxTest-Dynamic in Copy Files */,
+				DF3045271FF31E5E009A779B /* RxStarscream.framework in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E402203D1CFF3C6900C5A874 /* Embed Frameworks */ = {
@@ -114,10 +90,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0B4DAAC91E04980000ECDBF9 /* RxCocoa.framework in Embed Frameworks */,
-				EE32F642227B292400F27FFA /* RxRelay.framework in Embed Frameworks */,
-				E402203A1CFF3C6900C5A874 /* RxSwift.framework in Embed Frameworks */,
-				E402203C1CFF3C6900C5A874 /* Starscream.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,24 +97,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxStarscream_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D95A41204F7E9A00159C45 /* RxStarscream_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxStarscream_macOS.h; sourceTree = "<group>"; };
 		98D95A42204F7E9B00159C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D95A47204F7E9B00159C45 /* RxStarscream-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxStarscream-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D95A4C204F7E9B00159C45 /* RxStarscream_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxStarscream_macOSTests.swift; sourceTree = "<group>"; };
 		98D95A4E204F7E9B00159C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98D95A58204F7EDE00159C45 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
-		98D95A5A204F7EEE00159C45 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
-		98D95A5C204F7EF800159C45 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
-		98D95A64204F83AE00159C45 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
 		BEF314401E86D13C00C15DD4 /* RxStarscreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxStarscreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxStarscreamTests.swift; sourceTree = "<group>"; };
 		BEF314441E86D13C00C15DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
-		BEF3144E1E86DB0700C15DD4 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = Carthage/Build/iOS; sourceTree = "<group>"; };
-		E42144A21CFF275E00885498 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		E42144A31CFF275E00885498 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		E42144DA1CFF385E00885498 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42144DC1CFF385E00885498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E42144DE1CFF385E00885498 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +117,6 @@
 		E46D00291CFF22200054DF1F /* RxStarscream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxStarscream.h; sourceTree = "<group>"; };
 		E46D002B1CFF22200054DF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E46D00311CFF22760054DF1F /* RxStarscream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxStarscream.swift; path = Source/RxStarscream.swift; sourceTree = SOURCE_ROOT; };
-		EE32F631227B251800F27FFA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
-		EE32F638227B257600F27FFA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/Mac/RxRelay.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +124,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D95A5F204F7FC300159C45 /* RxCocoa.framework in Frameworks */,
-				EE32F639227B257600F27FFA /* RxRelay.framework in Frameworks */,
-				98D95A59204F7EDF00159C45 /* RxSwift.framework in Frameworks */,
-				98D95A5D204F7EF800159C45 /* Starscream.framework in Frameworks */,
+				A38CE3542B1B6F4A00AEAFB3 /* RxSwift in Frameworks */,
+				A38CE3522B1B6F4A00AEAFB3 /* RxRelay in Frameworks */,
+				A38CE3502B1B6F4A00AEAFB3 /* RxCocoa in Frameworks */,
+				A38CE3562B1B6F8300AEAFB3 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,12 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D95A62204F839A00159C45 /* RxCocoa.framework in Frameworks */,
-				EE32F63A227B258500F27FFA /* RxRelay.framework in Frameworks */,
+				A36A15252B278DB400564C10 /* RxTest-Dynamic in Frameworks */,
 				98D95A48204F7E9B00159C45 /* RxStarscream_macOS.framework in Frameworks */,
-				98D95A63204F83A400159C45 /* RxSwift.framework in Frameworks */,
-				98D95A65204F83AE00159C45 /* RxTest.framework in Frameworks */,
-				98D95A67204F85D000159C45 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,11 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE32F640227B28A500F27FFA /* RxRelay.framework in Frameworks */,
+				A36A15232B278D9C00564C10 /* RxTest-Dynamic in Frameworks */,
 				BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */,
-				BEF314521E86DB5700C15DD4 /* RxSwift.framework in Frameworks */,
-				BEF314541E86DB5700C15DD4 /* RxTest.framework in Frameworks */,
-				BEF314551E86DB5700C15DD4 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,10 +153,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B4DAAC81E04980000ECDBF9 /* RxCocoa.framework in Frameworks */,
-				EE32F633227B253200F27FFA /* RxRelay.framework in Frameworks */,
-				E42144ED1CFF3AC600885498 /* RxSwift.framework in Frameworks */,
-				E42144EE1CFF3AC900885498 /* Starscream.framework in Frameworks */,
+				A38CE35E2B1CF8F200AEAFB3 /* RxRelay in Frameworks */,
+				A38CE35C2B1CF8F200AEAFB3 /* RxCocoa in Frameworks */,
+				A38CE3602B1CF8F200AEAFB3 /* RxSwift in Frameworks */,
+				A38CE3622B1CF8F200AEAFB3 /* Starscream in Frameworks */,
+				A38CE35A2B1CF8F200AEAFB3 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,10 +165,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B4DAAC71E0497BC00ECDBF9 /* RxCocoa.framework in Frameworks */,
-				EE32F632227B251800F27FFA /* RxRelay.framework in Frameworks */,
-				E42144A41CFF275E00885498 /* RxSwift.framework in Frameworks */,
-				E42144A51CFF275E00885498 /* Starscream.framework in Frameworks */,
+				A311208C2B1ACE330027DA34 /* RxRelay in Frameworks */,
+				A311208A2B1ACE330027DA34 /* RxCocoa in Frameworks */,
+				A311208E2B1ACE330027DA34 /* RxSwift in Frameworks */,
+				A31120882B1ACE330027DA34 /* RxBlocking in Frameworks */,
+				A31120932B1ACE410027DA34 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +194,13 @@
 			path = "RxStarscream-macOSTests";
 			sourceTree = "<group>";
 		};
+		A38CE3492B1B6E6D00AEAFB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BEF314411E86D13C00C15DD4 /* RxStarscreamTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,31 +208,6 @@
 				BEF314421E86D13C00C15DD4 /* RxStarscreamTests.swift */,
 			);
 			path = RxStarscreamTests;
-			sourceTree = "<group>";
-		};
-		BEF3144B1E86DAF900C15DD4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BEF3144E1E86DB0700C15DD4 /* iOS */,
-				98D95A5A204F7EEE00159C45 /* RxCocoa.framework */,
-				EE32F638227B257600F27FFA /* RxRelay.framework */,
-				98D95A58204F7EDE00159C45 /* RxSwift.framework */,
-				98D95A64204F83AE00159C45 /* RxTest.framework */,
-				98D95A5C204F7EF800159C45 /* Starscream.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E42144A61CFF27C800885498 /* Dependency Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0B4DAAC61E0497BC00ECDBF9 /* RxCocoa.framework */,
-				EE32F631227B251800F27FFA /* RxRelay.framework */,
-				E42144A21CFF275E00885498 /* RxSwift.framework */,
-				BEF3144C1E86DAFA00C15DD4 /* RxTest.framework */,
-				E42144A31CFF275E00885498 /* Starscream.framework */,
-			);
-			name = "Dependency Frameworks";
 			sourceTree = "<group>";
 		};
 		E42144DB1CFF385E00885498 /* SampleApp */ = {
@@ -294,8 +232,7 @@
 				98D95A40204F7E9A00159C45 /* RxStarscream-macOS */,
 				98D95A4B204F7E9B00159C45 /* RxStarscream-macOSTests */,
 				E46D00271CFF22200054DF1F /* Products */,
-				E42144A61CFF27C800885498 /* Dependency Frameworks */,
-				BEF3144B1E86DAF900C15DD4 /* Frameworks */,
+				A38CE3492B1B6E6D00AEAFB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -357,6 +294,12 @@
 			dependencies = (
 			);
 			name = "RxStarscream-macOS";
+			packageProductDependencies = (
+				A38CE34F2B1B6F4A00AEAFB3 /* RxCocoa */,
+				A38CE3512B1B6F4A00AEAFB3 /* RxRelay */,
+				A38CE3532B1B6F4A00AEAFB3 /* RxSwift */,
+				A38CE3552B1B6F8300AEAFB3 /* Starscream */,
+			);
 			productName = "RxStarscream-macOS";
 			productReference = 98D95A3F204F7E9A00159C45 /* RxStarscream_macOS.framework */;
 			productType = "com.apple.product-type.framework";
@@ -376,6 +319,9 @@
 				98D95A4A204F7E9B00159C45 /* PBXTargetDependency */,
 			);
 			name = "RxStarscream-macOSTests";
+			packageProductDependencies = (
+				A36A15242B278DB400564C10 /* RxTest-Dynamic */,
+			);
 			productName = "RxStarscream-macOSTests";
 			productReference = 98D95A47204F7E9B00159C45 /* RxStarscream-macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -387,7 +333,7 @@
 				BEF3143C1E86D13C00C15DD4 /* Sources */,
 				BEF3143D1E86D13C00C15DD4 /* Frameworks */,
 				BEF3143E1E86D13C00C15DD4 /* Resources */,
-				BEF314561E875D5F00C15DD4 /* CopyFiles */,
+				BEF314561E875D5F00C15DD4 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -395,6 +341,9 @@
 				BEF314471E86D13C00C15DD4 /* PBXTargetDependency */,
 			);
 			name = RxStarscreamTests;
+			packageProductDependencies = (
+				A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */,
+			);
 			productName = RxStarscreamTests;
 			productReference = BEF314401E86D13C00C15DD4 /* RxStarscreamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -413,6 +362,13 @@
 			dependencies = (
 			);
 			name = SampleApp;
+			packageProductDependencies = (
+				A38CE3592B1CF8F200AEAFB3 /* RxBlocking */,
+				A38CE35B2B1CF8F200AEAFB3 /* RxCocoa */,
+				A38CE35D2B1CF8F200AEAFB3 /* RxRelay */,
+				A38CE35F2B1CF8F200AEAFB3 /* RxSwift */,
+				A38CE3612B1CF8F200AEAFB3 /* Starscream */,
+			);
 			productName = SampleApp;
 			productReference = E42144DA1CFF385E00885498 /* SampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -431,6 +387,13 @@
 			dependencies = (
 			);
 			name = RxStarscream;
+			packageProductDependencies = (
+				A31120872B1ACE330027DA34 /* RxBlocking */,
+				A31120892B1ACE330027DA34 /* RxCocoa */,
+				A311208B2B1ACE330027DA34 /* RxRelay */,
+				A311208D2B1ACE330027DA34 /* RxSwift */,
+				A31120922B1ACE410027DA34 /* Starscream */,
+			);
 			productName = RxStarscream;
 			productReference = E46D00261CFF22200054DF1F /* RxStarscream.framework */;
 			productType = "com.apple.product-type.framework";
@@ -475,14 +438,17 @@
 			};
 			buildConfigurationList = E46D00201CFF22200054DF1F /* Build configuration list for PBXProject "RxStarscream" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
 			mainGroup = E46D001C1CFF22200054DF1F;
+			packageReferences = (
+				A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
 			productRefGroup = E46D00271CFF22200054DF1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -629,16 +595,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "RxStarscream-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwift.RxStarscream-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -662,16 +629,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "RxStarscream-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwift.RxStarscream-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -697,8 +665,12 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "RxStarscream-macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwift.RxStarscream-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -724,8 +696,12 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "RxStarscream-macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwift.RxStarscream-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -740,13 +716,14 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = 7GE4Q65N57;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RxStarscreamTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -761,16 +738,18 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = 7GE4Q65N57;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RxStarscreamTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -787,7 +766,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -809,7 +791,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -867,8 +852,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -922,11 +907,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -946,13 +932,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RxStarscream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -973,13 +960,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RxStarscream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwift.RxStarscream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1046,6 +1034,108 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.6.0;
+			};
+		};
+		A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A31120872B1ACE330027DA34 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		A31120892B1ACE330027DA34 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A311208B2B1ACE330027DA34 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		A311208D2B1ACE330027DA34 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		A31120922B1ACE410027DA34 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		A36A15242B278DB400564C10 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
+		A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
+		A38CE34F2B1B6F4A00AEAFB3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A38CE3512B1B6F4A00AEAFB3 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		A38CE3532B1B6F4A00AEAFB3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		A38CE3552B1B6F8300AEAFB3 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		A38CE3592B1CF8F200AEAFB3 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		A38CE35B2B1CF8F200AEAFB3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A38CE35D2B1CF8F200AEAFB3 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		A38CE35F2B1CF8F200AEAFB3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		A38CE3612B1CF8F200AEAFB3 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E46D001D1CFF22200054DF1F /* Project object */;
 }

@@ -18,11 +18,11 @@ public func ==(lhs: WebSocketEvent, rhs: WebSocketEvent) -> Bool {
     switch (lhs, rhs) {
     case (.connected, .connected):
         return true
-    case (.disconnected(let lhsError), .disconnected(let rhsError)):
-        return lhsError?.localizedDescription == rhsError?.localizedDescription
-    case (.message(let lhsMsg), .message(let rhsMsg)):
-        return lhsMsg == rhsMsg
-    case (.data(let lhsData), .data(let rhsData)):
+    case (.disconnected, .disconnected):
+        return true
+    case (.text(let lhsText), .text(let rhsText)):
+        return lhsText == rhsText
+    case (.binary(let lhsData), .binary(let rhsData)):
         return lhsData == rhsData
     case (.pong, .pong):
         return true
@@ -36,6 +36,7 @@ class RxStarscreamTests: XCTestCase {
     private var connectedObserver: TestableObserver<Bool>!
     private var pongObserver: TestableObserver<WebSocketEvent>!
     private var responseObserver: TestableObserver<WebSocketEvent>!
+    private var binaryObserver: TestableObserver<WebSocketEvent>!
     private var socket: WebSocket!
 
     let disposeBag = DisposeBag()
@@ -43,7 +44,7 @@ class RxStarscreamTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        socket = WebSocket(url: URL(string: "wss://echo.websocket.org")!)
+        socket = WebSocket(request: URLRequest(url: URL(string: "wss://echo.websocket.org")!))
         continueAfterFailure = false
     }
 
@@ -62,28 +63,46 @@ class RxStarscreamTests: XCTestCase {
         
         XCTAssertTrue(socket.delegate != nil, "delegate should be set")
         
-        socket.delegate!.websocketDidConnect(socket: socket)
-        socket.delegate!.websocketDidDisconnect(socket: socket, error: nil)
+        socket.delegate!.didReceive(event: .connected([:]), client: socket)
+        socket.delegate!.didReceive(event: .disconnected("", UInt16.zero), client: socket)
 
         XCTAssertEqual(self.connectedObserver.events.count, 2)
         XCTAssertEqual(self.connectedObserver.events[0].value.element!, true)
         XCTAssertEqual(self.connectedObserver.events[1].value.element!, false)
     }
+    
+    func testBinary() {
+        let scheuler = TestScheduler(initialClock: 0)
+        binaryObserver = scheuler.createObserver(WebSocketEvent.self)
+        
+        let binaryEvent = WebSocketEvent.binary(Data())
+        
+        socket.rx.response
+            .subscribe(binaryObserver)
+            .disposed(by: disposeBag)
+        
+        XCTAssertNotNil(socket.delegate)
+        
+        socket.delegate?.didReceive(event: binaryEvent, client: socket)
+        XCTAssertEqual(self.binaryObserver.events.count, 1)
+        XCTAssertEqual(self.binaryObserver.events[0].value.element!, binaryEvent)
+    }
 
     func testPongMessage() {
         let scheduler = TestScheduler(initialClock: 0)
         pongObserver = scheduler.createObserver(WebSocketEvent.self)
+        
+        let pongEvent = WebSocketEvent.pong(Data())
 
         socket.rx.response
                 .subscribe(pongObserver)
                 .disposed(by: disposeBag)
         
-        XCTAssertTrue(socket.pongDelegate != nil, "pongDelegate should be set")
-        
-        socket.pongDelegate!.websocketDidReceivePong(socket: socket, data: Data())
+        XCTAssertNotNil(socket.delegate)
 
+        socket.delegate?.didReceive(event: pongEvent, client: socket)
         XCTAssertEqual(self.pongObserver.events.count, 1)
-        XCTAssertEqual(self.pongObserver.events[0].value.element!, WebSocketEvent.pong)
+        XCTAssertEqual(self.pongObserver.events[0].value.element!, pongEvent)
     }
 
     func testMessageResponse() {
@@ -98,9 +117,10 @@ class RxStarscreamTests: XCTestCase {
         
         XCTAssertTrue(socket.delegate != nil, "delegate should be set")
 
-        socket.delegate!.websocketDidReceiveMessage(socket: socket, text: sentMessage)
+        socket.delegate!.didReceive(event: .text(sentMessage), client: socket)
         
         XCTAssertEqual(self.responseObserver.events.count, 1)
-        XCTAssertEqual(WebSocketEvent.message(sentMessage), self.responseObserver.events[0].value.element!)
+        XCTAssertEqual(WebSocketEvent.text(sentMessage), self.responseObserver.events[0].value.element!)
     }
 }
+

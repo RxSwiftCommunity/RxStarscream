@@ -22,7 +22,12 @@ DerivedData
 .idea/
 # Framworks
 *.framework
-
+# SPM
+Packages/
+Package.pins
+Package.resolved
+.swiftpm
+*.xcodeproj
 
 Carthage/Build
 Carthage/Checkouts

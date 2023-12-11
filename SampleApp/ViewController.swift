@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet fileprivate weak var pongButton: UIBarButtonItem!
 
     private let disposeBag = DisposeBag()
-    private let socket = WebSocket(url: URL(string: "wss://echo.websocket.org")!)
+    private let socket = WebSocket(request: URLRequest(url: URL(string: "wss://echo.websocket.org")!))
     private let writeSubject = PublishSubject<String>()
     
     override func viewDidLoad() {
@@ -38,14 +38,26 @@ class ViewController: UIViewController {
                 switch response {
                 case .connected:
                     return "Connected\n"
-                case .disconnected(let error):
+                case .disconnected(let error, _):
                     return "Disconnected with error: \(String(describing: error)) \n"
-                case .message(let msg):
-                    return "RESPONSE (Message): \(msg) \n"
-                case .data(let data):
+                case .text(let text):
+                    return "RESPONSE (Message): \(text) \n"
+                case .binary(let data):
                     return  "RESPONSE (Data): \(data) \n"
                 case .pong:
                     return "RESPONSE (Pong)"
+                case .ping:
+                    return "PING \n"
+                case .error(let error):
+                    return error?.localizedDescription ?? "Unknow error \n"
+                case .viabilityChanged(let changed):
+                    return "Viability changed: \(changed) \n"
+                case .reconnectSuggested(let suggested):
+                    return "Reconnect suggested: \(suggested) \n"
+                case .cancelled:
+                    return "Cancelled \n"
+                case .peerClosed:
+                    return "Peer closed \n"
                 }
         }
         
