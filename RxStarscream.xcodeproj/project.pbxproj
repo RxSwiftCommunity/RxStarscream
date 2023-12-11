@@ -17,13 +17,14 @@
 		A311208C2B1ACE330027DA34 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A311208B2B1ACE330027DA34 /* RxRelay */; };
 		A311208E2B1ACE330027DA34 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A311208D2B1ACE330027DA34 /* RxSwift */; };
 		A31120932B1ACE410027DA34 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A31120922B1ACE410027DA34 /* Starscream */; };
+		A36A15232B278D9C00564C10 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */; };
+		A36A15252B278DB400564C10 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A36A15242B278DB400564C10 /* RxTest-Dynamic */; };
+		A36A15262B278DB400564C10 /* RxTest-Dynamic in CopyFiles */ = {isa = PBXBuildFile; productRef = A36A15242B278DB400564C10 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A38CE34C2B1B6E6D00AEAFB3 /* RxTest-Dynamic in Copy Files */ = {isa = PBXBuildFile; productRef = A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A38CE34E2B1B6EB400AEAFB3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34D2B1B6EB400AEAFB3 /* RxTest */; };
 		A38CE3502B1B6F4A00AEAFB3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE34F2B1B6F4A00AEAFB3 /* RxCocoa */; };
 		A38CE3522B1B6F4A00AEAFB3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3512B1B6F4A00AEAFB3 /* RxRelay */; };
 		A38CE3542B1B6F4A00AEAFB3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3532B1B6F4A00AEAFB3 /* RxSwift */; };
 		A38CE3562B1B6F8300AEAFB3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3552B1B6F8300AEAFB3 /* Starscream */; };
-		A38CE3582B1B704000AEAFB3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3572B1B704000AEAFB3 /* RxTest */; };
 		A38CE35A2B1CF8F200AEAFB3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE3592B1CF8F200AEAFB3 /* RxBlocking */; };
 		A38CE35C2B1CF8F200AEAFB3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35B2B1CF8F200AEAFB3 /* RxCocoa */; };
 		A38CE35E2B1CF8F200AEAFB3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A38CE35D2B1CF8F200AEAFB3 /* RxRelay */; };
@@ -66,6 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A36A15262B278DB400564C10 /* RxTest-Dynamic in CopyFiles */,
 				98655E3C204F892000524A64 /* RxStarscream_macOS.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38CE3582B1B704000AEAFB3 /* RxTest in Frameworks */,
+				A36A15252B278DB400564C10 /* RxTest-Dynamic in Frameworks */,
 				98D95A48204F7E9B00159C45 /* RxStarscream_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38CE34E2B1B6EB400AEAFB3 /* RxTest in Frameworks */,
+				A36A15232B278D9C00564C10 /* RxTest-Dynamic in Frameworks */,
 				BEF314451E86D13C00C15DD4 /* RxStarscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +320,7 @@
 			);
 			name = "RxStarscream-macOSTests";
 			packageProductDependencies = (
-				A38CE3572B1B704000AEAFB3 /* RxTest */,
+				A36A15242B278DB400564C10 /* RxTest-Dynamic */,
 			);
 			productName = "RxStarscream-macOSTests";
 			productReference = 98D95A47204F7E9B00159C45 /* RxStarscream-macOSTests.xctest */;
@@ -341,7 +343,6 @@
 			name = RxStarscreamTests;
 			packageProductDependencies = (
 				A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */,
-				A38CE34D2B1B6EB400AEAFB3 /* RxTest */,
 			);
 			productName = RxStarscreamTests;
 			productReference = BEF314401E86D13C00C15DD4 /* RxStarscreamTests.xctest */;
@@ -1079,15 +1080,15 @@
 			package = A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */;
 			productName = Starscream;
 		};
-		A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */ = {
+		A36A15242B278DB400564C10 /* RxTest-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = "RxTest-Dynamic";
 		};
-		A38CE34D2B1B6EB400AEAFB3 /* RxTest */ = {
+		A38CE34A2B1B6E6D00AEAFB3 /* RxTest-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
+			productName = "RxTest-Dynamic";
 		};
 		A38CE34F2B1B6F4A00AEAFB3 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1108,11 +1109,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A31120912B1ACE410027DA34 /* XCRemoteSwiftPackageReference "Starscream" */;
 			productName = Starscream;
-		};
-		A38CE3572B1B704000AEAFB3 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A31120862B1ACE330027DA34 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		A38CE3592B1CF8F200AEAFB3 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
